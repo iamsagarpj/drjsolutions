@@ -43,14 +43,14 @@ Open the URL printed by Vite (typically `http://localhost:5173`).
 
 Copy `.env.example` to `.env` and adjust:
 
-| Variable                                             | Purpose                                                                                   |
-| ---------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `VITE_SITE_URL`                                      | Canonical site URL for SEO, sitemap, Open Graph                                           |
+| Variable                                             | Purpose                                                                                                    |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `VITE_SITE_URL`                                      | Canonical site URL for SEO, sitemap, Open Graph                                                            |
 | `VITE_CONTACT_API_URL`                               | Optional POST endpoint for lead forms. Empty = Netlify Forms in production, local storage in `npm run dev` |
-| `VITE_GA_MEASUREMENT_ID`                             | Optional Google Analytics ID (e.g. `G-XXXXXXXX`)                                          |
-| `VITE_GOOGLE_MAPS_URL`                               | Optional Google Maps place URL                                                            |
-| `VITE_GOOGLE_MAPS_EMBED_URL`                         | Optional Maps embed URL for the contact page                                              |
-| `VITE_BUSINESS_LATITUDE` / `VITE_BUSINESS_LONGITUDE` | Optional coordinates once verified                                                        |
+| `VITE_GA_MEASUREMENT_ID`                             | Optional Google Analytics ID (e.g. `G-XXXXXXXX`)                                                           |
+| `VITE_GOOGLE_MAPS_URL`                               | Optional Google Maps place URL                                                                             |
+| `VITE_GOOGLE_MAPS_EMBED_URL`                         | Optional Maps embed URL for the contact page                                                               |
+| `VITE_BUSINESS_LATITUDE` / `VITE_BUSINESS_LONGITUDE` | Optional coordinates once verified                                                                         |
 
 Never put API secrets in `VITE_*` variables. Those values are exposed to the browser.
 
@@ -89,12 +89,12 @@ The site is a Vite SPA. `netlify.toml` sets the build, publish folder, Node 22, 
    - **Publish directory:** `dist`
 4. Add environment variables under **Site configuration → Environment variables** (required at build time because Vite inlines `VITE_*` values):
 
-| Variable | Suggested value |
-| --- | --- |
-| `VITE_SITE_URL` | Your live URL, e.g. `https://www.drjsolutions.in` or `https://your-site.netlify.app` |
-| `VITE_CONTACT_API_URL` | Leave empty to collect leads in **Netlify → Forms** (`lead`) |
-| `VITE_GA_MEASUREMENT_ID` | Optional, e.g. `G-XXXXXXXX` |
-| `VITE_GOOGLE_MAPS_URL` / `VITE_GOOGLE_MAPS_EMBED_URL` | Optional |
+| Variable                                              | Suggested value                                                                      |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| `VITE_SITE_URL`                                       | Your live URL, e.g. `https://www.drjsolutions.in` or `https://your-site.netlify.app` |
+| `VITE_CONTACT_API_URL`                                | Leave empty to collect leads in **Netlify → Forms** (`lead`)                         |
+| `VITE_GA_MEASUREMENT_ID`                              | Optional, e.g. `G-XXXXXXXX`                                                          |
+| `VITE_GOOGLE_MAPS_URL` / `VITE_GOOGLE_MAPS_EMBED_URL` | Optional                                                                             |
 
 5. Deploy. After the first production submit, open **Forms → lead** to see enquiries.
 6. Point a custom domain at the site under **Domain management**. Then set `VITE_SITE_URL` to that domain and trigger a new deploy.
