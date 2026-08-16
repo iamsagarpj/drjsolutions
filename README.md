@@ -28,25 +28,29 @@ Open the URL printed by Vite (typically `http://localhost:5173`).
 
 ## Scripts
 
-| Command | Purpose |
-| --- | --- |
-| `npm run dev` | Local development server |
-| `npm run lint` | ESLint |
-| `npm run build` | Typecheck + production build |
-| `npm run preview` | Preview the production build |
+| Command                                      | Purpose                          |
+| -------------------------------------------- | -------------------------------- |
+| `npm run dev`                                | Local development server         |
+| `make lint` / `npm run lint`                 | ESLint                           |
+| `make lint-fix` / `npm run lint:fix`         | ESLint with safe auto-fixes      |
+| `make format` / `npm run format`             | Format files with Prettier       |
+| `make format-check` / `npm run format:check` | Check formatting without writing |
+| `make check`                                 | Lint and check formatting        |
+| `npm run build`                              | Typecheck + production build     |
+| `npm run preview`                            | Preview the production build     |
 
 ## Environment variables
 
 Copy `.env.example` to `.env` and adjust:
 
-| Variable | Purpose |
-| --- | --- |
-| `VITE_SITE_URL` | Canonical site URL for SEO, sitemap, Open Graph |
-| `VITE_CONTACT_API_URL` | Optional POST endpoint for lead forms. Empty = store locally until a backend is connected |
-| `VITE_GA_MEASUREMENT_ID` | Optional Google Analytics ID (e.g. `G-XXXXXXXX`) |
-| `VITE_GOOGLE_MAPS_URL` | Optional Google Maps place URL |
-| `VITE_GOOGLE_MAPS_EMBED_URL` | Optional Maps embed URL for the contact page |
-| `VITE_BUSINESS_LATITUDE` / `VITE_BUSINESS_LONGITUDE` | Optional coordinates once verified |
+| Variable                                             | Purpose                                                                                   |
+| ---------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `VITE_SITE_URL`                                      | Canonical site URL for SEO, sitemap, Open Graph                                           |
+| `VITE_CONTACT_API_URL`                               | Optional POST endpoint for lead forms. Empty = store locally until a backend is connected |
+| `VITE_GA_MEASUREMENT_ID`                             | Optional Google Analytics ID (e.g. `G-XXXXXXXX`)                                          |
+| `VITE_GOOGLE_MAPS_URL`                               | Optional Google Maps place URL                                                            |
+| `VITE_GOOGLE_MAPS_EMBED_URL`                         | Optional Maps embed URL for the contact page                                              |
+| `VITE_BUSINESS_LATITUDE` / `VITE_BUSINESS_LONGITUDE` | Optional coordinates once verified                                                        |
 
 Never put API secrets in `VITE_*` variables. Those values are exposed to the browser.
 
@@ -94,4 +98,5 @@ Update `VITE_SITE_URL` and `public/sitemap.xml` / `public/robots.txt` to the rea
 - Verified subsidy amounts (leave empty until confirmed)
 - Founder / team details on the About page
 - Optional email address
+
 # drjsolutions
