@@ -46,7 +46,7 @@ Copy `.env.example` to `.env` and adjust:
 | Variable                                             | Purpose                                                                                   |
 | ---------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | `VITE_SITE_URL`                                      | Canonical site URL for SEO, sitemap, Open Graph                                           |
-| `VITE_CONTACT_API_URL`                               | Optional POST endpoint for lead forms. Empty = store locally until a backend is connected |
+| `VITE_CONTACT_API_URL`                               | Optional POST endpoint for lead forms. Empty = Netlify Forms in production, local storage in `npm run dev` |
 | `VITE_GA_MEASUREMENT_ID`                             | Optional Google Analytics ID (e.g. `G-XXXXXXXX`)                                          |
 | `VITE_GOOGLE_MAPS_URL`                               | Optional Google Maps place URL                                                            |
 | `VITE_GOOGLE_MAPS_EMBED_URL`                         | Optional Maps embed URL for the contact page                                              |
@@ -56,7 +56,7 @@ Never put API secrets in `VITE_*` variables. Those values are exposed to the bro
 
 ## Connect a backend later
 
-Lead submissions go through `src/services/contactService.ts`. Point `VITE_CONTACT_API_URL` at FastAPI, Node, Firebase, Supabase, a CRM webhook, or an email worker. The request body is JSON:
+Lead submissions go through `src/services/contactService.ts`. On Netlify, leave `VITE_CONTACT_API_URL` empty to collect leads in **Forms → lead**. To use your own API instead, set `VITE_CONTACT_API_URL` to FastAPI, Node, Firebase, Supabase, a CRM webhook, or an email worker. The request body is JSON:
 
 ```json
 {
@@ -78,17 +78,30 @@ Lead submissions go through `src/services/contactService.ts`. Point `VITE_CONTAC
 - Business details / phone / address: `src/config/site.ts`
 - Calculator assumptions & subsidy placeholders: `src/config/calculator.ts`
 
-## Deploy
+## Deploy on Netlify
 
-The app is a static SPA.
+The site is a Vite SPA. `netlify.toml` sets the build, publish folder, Node 22, SPA fallback, and cache headers.
 
-**Vercel:** this repo includes `vercel.json` with SPA rewrites.
+1. Push this repo to GitHub (or GitLab / Bitbucket).
+2. In [Netlify](https://app.netlify.com), **Add new site → Import an existing project**.
+3. Select the repo. Build settings are already in `netlify.toml`:
+   - **Build command:** `npm run build`
+   - **Publish directory:** `dist`
+4. Add environment variables under **Site configuration → Environment variables** (required at build time because Vite inlines `VITE_*` values):
 
-**Netlify:** `public/_redirects` already contains `/* /index.html 200`.
+| Variable | Suggested value |
+| --- | --- |
+| `VITE_SITE_URL` | Your live URL, e.g. `https://www.drjsolutions.in` or `https://your-site.netlify.app` |
+| `VITE_CONTACT_API_URL` | Leave empty to collect leads in **Netlify → Forms** (`lead`) |
+| `VITE_GA_MEASUREMENT_ID` | Optional, e.g. `G-XXXXXXXX` |
+| `VITE_GOOGLE_MAPS_URL` / `VITE_GOOGLE_MAPS_EMBED_URL` | Optional |
 
-**Any static host:** upload the `dist/` folder after `npm run build`. Configure the server to serve `index.html` for unknown routes.
+5. Deploy. After the first production submit, open **Forms → lead** to see enquiries.
+6. Point a custom domain at the site under **Domain management**. Then set `VITE_SITE_URL` to that domain and trigger a new deploy.
 
-Update `VITE_SITE_URL` and `public/sitemap.xml` / `public/robots.txt` to the real domain before launch.
+SPA routes (`/about`, `/contact`, …) are rewritten to `index.html` via `netlify.toml` and `public/_redirects`.
+
+Local development still saves leads in the browser until you connect an API. Never put private API keys in `VITE_*` variables.
 
 ## Replace before launch
 
