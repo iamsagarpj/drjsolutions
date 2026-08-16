@@ -59,6 +59,8 @@ export function LeadForm({
     if (result.ok) reset({ ...values, message: '' });
   }
 
+  const fieldClass = cn('field', compact && 'field-compact');
+
   if (status === 'success') {
     return (
       <div className="rounded-2xl border border-leaf/20 bg-leaf-soft px-5 py-8 text-center">
@@ -80,10 +82,10 @@ export function LeadForm({
     <form
       onSubmit={handleSubmit(onSubmit)}
       noValidate
-      className={cn('grid gap-4', compact && 'gap-3')}
+      className={cn('grid gap-4', compact && 'grid-cols-1 gap-3 sm:grid-cols-2')}
     >
       {status === 'error' ? (
-        <div className="flex items-start gap-2 rounded-xl border border-danger/20 bg-danger/5 px-3 py-3 text-sm text-danger">
+        <div className="flex items-start gap-2 rounded-xl border border-danger/20 bg-danger/5 px-3 py-3 text-sm text-danger sm:col-span-2">
           <AlertCircle className="mt-0.5 size-4 shrink-0" aria-hidden />
           <div>
             <p className="font-semibold">{t.form.failTitle}</p>
@@ -92,18 +94,28 @@ export function LeadForm({
         </div>
       ) : null}
 
-      <Field label={t.form.name} error={errors.name ? t.form.errors.name : undefined} required>
+      <Field
+        label={t.form.name}
+        error={errors.name ? t.form.errors.name : undefined}
+        required
+        compact={compact}
+      >
         <input
-          className="field"
+          className={fieldClass}
           autoComplete="name"
           {...register('name')}
           aria-invalid={!!errors.name}
         />
       </Field>
 
-      <Field label={t.form.phone} error={errors.phone ? t.form.errors.phone : undefined} required>
+      <Field
+        label={t.form.phone}
+        error={errors.phone ? t.form.errors.phone : undefined}
+        required
+        compact={compact}
+      >
         <input
-          className="field"
+          className={fieldClass}
           type="tel"
           inputMode="numeric"
           autoComplete="tel"
@@ -113,39 +125,53 @@ export function LeadForm({
         />
       </Field>
 
-      <Field label={t.form.city} error={errors.city ? t.form.errors.city : undefined} required>
+      <Field
+        label={t.form.city}
+        error={errors.city ? t.form.errors.city : undefined}
+        required
+        compact={compact}
+      >
         <input
-          className="field"
+          className={fieldClass}
           autoComplete="address-level2"
           {...register('city')}
           aria-invalid={!!errors.city}
         />
       </Field>
 
-      <div className="grid gap-4 sm:grid-cols-2">
-        <Field label={t.form.bill} optional>
-          <input className="field" inputMode="numeric" {...register('monthlyBill')} />
-        </Field>
-        <Field label={t.form.propertyType}>
-          <select className="field" {...register('propertyType')}>
-            {PROPERTY_KEYS.map((key) => (
-              <option key={key} value={key}>
-                {t.form.propertyOptions[key]}
-              </option>
-            ))}
-          </select>
-        </Field>
-      </div>
-
-      <Field label={t.form.message} optional>
-        <textarea className="field min-h-24 resize-y" rows={3} {...register('message')} />
+      <Field label={t.form.bill} optional compact={compact}>
+        <input className={fieldClass} inputMode="numeric" {...register('monthlyBill')} />
       </Field>
 
-      <p className="text-xs text-faint">{t.common.privacyNote}</p>
+      <Field label={t.form.propertyType} compact={compact}>
+        <select className={fieldClass} {...register('propertyType')}>
+          {PROPERTY_KEYS.map((key) => (
+            <option key={key} value={key}>
+              {t.form.propertyOptions[key]}
+            </option>
+          ))}
+        </select>
+      </Field>
 
-      <Button type="submit" disabled={isSubmitting} className="w-full sm:w-auto">
-        {isSubmitting ? t.common.sending : t.cta.submitSurvey}
-      </Button>
+      <Field label={t.form.message} optional compact={compact}>
+        <textarea
+          className={cn(fieldClass, compact ? 'min-h-11 resize-none' : 'min-h-24 resize-y')}
+          rows={compact ? 2 : 3}
+          {...register('message')}
+        />
+      </Field>
+
+      <div
+        className={cn(
+          'flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between',
+          compact && 'sm:col-span-2',
+        )}
+      >
+        <p className="text-xs text-faint sm:max-w-sm">{t.common.privacyNote}</p>
+        <Button type="submit" disabled={isSubmitting} className="w-full shrink-0 sm:w-auto">
+          {isSubmitting ? t.common.sending : t.cta.submitSurvey}
+        </Button>
+      </div>
     </form>
   );
 }
@@ -155,24 +181,31 @@ function Field({
   error,
   required,
   optional,
+  compact,
   children,
 }: {
   label: string;
   error?: string;
   required?: boolean;
   optional?: boolean;
+  compact?: boolean;
   children: React.ReactNode;
 }) {
   const { t } = useLanguage();
   return (
-    <label className="block">
-      <span className="mb-1.5 flex items-baseline justify-between gap-2 text-sm font-medium text-navy">
+    <label className="block min-w-0">
+      <span
+        className={cn(
+          'mb-1.5 flex items-baseline justify-between gap-2 font-medium text-navy',
+          compact ? 'text-xs' : 'text-sm',
+        )}
+      >
         <span>
           {label}
           {required ? <span className="text-danger"> *</span> : null}
         </span>
         {optional ? (
-          <span className="text-xs font-normal text-faint">{t.common.optional}</span>
+          <span className="text-[0.7rem] font-normal text-faint">{t.common.optional}</span>
         ) : null}
       </span>
       {children}

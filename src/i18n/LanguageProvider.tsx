@@ -4,7 +4,7 @@ import type { Language } from '@/content/types';
 import { LanguageContext } from '@/i18n/useLanguage';
 import { track } from '@/services/analytics';
 
-const STORAGE_KEY = 'drj-lang';
+const STORAGE_KEY = 'drj-language';
 
 function readInitialLang(): Language {
   try {
@@ -13,7 +13,7 @@ function readInitialLang(): Language {
   } catch {
     /* ignore */
   }
-  return 'mr';
+  return 'en';
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {

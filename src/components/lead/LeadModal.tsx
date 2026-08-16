@@ -25,7 +25,7 @@ export function LeadModal() {
 
   return (
     <div
-      className="fixed inset-0 z-[70] flex items-end justify-center sm:items-center"
+      className="fixed inset-0 z-[70] flex items-end justify-center p-0 sm:items-center sm:p-4"
       role="dialog"
       aria-modal="true"
       aria-labelledby="lead-modal-title"
@@ -36,9 +36,12 @@ export function LeadModal() {
         aria-label={t.common.closeMenu}
         onClick={closeModal}
       />
-      <div className="relative z-10 max-h-[min(92dvh,40rem)] w-full overflow-y-auto rounded-t-3xl bg-paper p-4 pb-[max(1.25rem,env(safe-area-inset-bottom))] shadow-lift sm:max-w-lg sm:rounded-3xl sm:p-7">
-        <div className="mb-5 flex items-start justify-between gap-4">
-          <h2 id="lead-modal-title" className="min-w-0 font-display text-xl text-navy sm:text-2xl">
+      <div className="relative z-10 flex max-h-[min(92dvh,calc(100dvh-2rem))] w-full flex-col overflow-hidden rounded-t-3xl bg-paper shadow-lift sm:max-w-2xl sm:rounded-3xl">
+        <div className="flex shrink-0 items-start justify-between gap-3 border-b border-line px-4 py-3 sm:px-6 sm:py-4">
+          <h2
+            id="lead-modal-title"
+            className="min-w-0 font-display text-lg leading-snug text-navy sm:text-xl"
+          >
             {t.form.title}
           </h2>
           <button
@@ -50,7 +53,9 @@ export function LeadModal() {
             <X className="size-5" />
           </button>
         </div>
-        <LeadForm source={source} compact />
+        <div className="min-h-0 overflow-y-auto px-4 py-4 sm:px-6 sm:py-5">
+          <LeadForm source={source} compact />
+        </div>
       </div>
     </div>
   );

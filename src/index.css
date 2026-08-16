@@ -305,6 +305,15 @@
     box-shadow: 0 0 0 4px rgba(180, 35, 24, 0.08);
   }
 
+  .field-compact {
+    min-height: 2.65rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  textarea.field-compact {
+    min-height: 2.65rem;
+  }
+
   .card {
     background: var(--color-paper);
     border: 1px solid rgba(15, 61, 50, 0.08);

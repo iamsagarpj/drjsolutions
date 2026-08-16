@@ -46,7 +46,7 @@ async function submitToNetlify(payload: LeadPayload): Promise<boolean> {
       propertyType: payload.propertyType,
       message: payload.message ?? '',
       source: payload.source ?? 'website',
-      language: payload.language ?? 'mr',
+      language: payload.language ?? 'en',
     }),
   });
   return response.ok;
