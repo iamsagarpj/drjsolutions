@@ -1,4 +1,4 @@
-import { BUSINESS, PHONE_E164 } from '@/config/site';
+import { BUSINESS } from '@/config/site';
 import { normalizeIndianPhone } from '@/lib/phone';
 import type { LeadPayload, PropertyType } from '@/services/contactService';
 
@@ -33,7 +33,7 @@ const SOURCE_LABELS: Record<string, string> = {
 
 function formatPhoneDisplay(phone: string): string {
   const digits = normalizeIndianPhone(phone);
-  if (digits.length === 10) return `${digits.slice(0, 5)} ${digits.slice(5)}`;
+  if (digits.length === 10) return `+91 ${digits.slice(0, 5)} ${digits.slice(5)}`;
   return phone.trim();
 }
 
@@ -65,29 +65,28 @@ function receivedAtIst(): string {
   }).format(new Date());
 }
 
+/** Two-column rows for FormSubmit's HTML table template. Insertion order is preserved. */
 export function enquiryEmailFields(payload: LeadPayload): Record<string, string> {
   const name = payload.name.trim();
-  const phone = formatPhoneDisplay(payload.phone);
   const city = payload.city.trim();
-  const digits = normalizeIndianPhone(payload.phone);
-  const callUrl = digits.length === 10 ? `tel:+91${digits}` : `tel:${PHONE_E164}`;
   const source = payload.source ?? 'website';
+  const message = payload.message?.trim();
 
-  return {
-    Summary: `New free site survey request from ${name} in ${city}. Please call or WhatsApp the customer to confirm a visit.`,
-    'Customer name': name,
-    'Phone number': phone,
-    'Call customer': callUrl,
-    'WhatsApp customer': customerWhatsAppUrl(name, payload.phone),
-    'City / location': city,
-    'Property type': PROPERTY_LABELS[payload.propertyType],
-    'Monthly electricity bill': formatBill(payload.monthlyBill),
-    'Customer message': payload.message?.trim() || 'No message added.',
-    'Submitted from': SOURCE_LABELS[source] ?? 'Website',
-    Language: payload.language === 'mr' ? 'Marathi' : 'English',
-    Received: `${receivedAtIst()} (IST)`,
-    Note: `This enquiry was submitted through the ${BUSINESS.name} website. Reply to the customer on the phone number above — do not reply to this notification email.`,
-  };
+  const rows: Array<[string, string]> = [
+    ['Enquiry', 'Free rooftop solar site survey'],
+    ['Customer', name],
+    ['Mobile', formatPhoneDisplay(payload.phone)],
+    ['WhatsApp', customerWhatsAppUrl(name, payload.phone)],
+    ['Location', city],
+    ['Property', PROPERTY_LABELS[payload.propertyType]],
+    ['Monthly bill', formatBill(payload.monthlyBill)],
+    ['Message', message || 'No message added'],
+    ['Submitted from', SOURCE_LABELS[source] ?? 'Website'],
+    ['Language', payload.language === 'mr' ? 'Marathi' : 'English'],
+    ['Received', `${receivedAtIst()} IST`],
+  ];
+
+  return Object.fromEntries(rows);
 }
 
 export function enquiryEmailSubject(payload: LeadPayload): string {

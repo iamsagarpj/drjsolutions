@@ -10,7 +10,7 @@ export const BUSINESS = {
   phone: PHONE_LOCAL,
   phoneE164: PHONE_E164,
   phoneDisplay: PHONE_DISPLAY,
-  email: 'jadhavsagar698@gmail.com',
+  email: 'drjsolutions5@gmail.com',
   address: {
     line1: 'Flat No ST 03, 7 Hills Apartment',
     line2: 'Near Samartha Mandir Road',

@@ -45,7 +45,7 @@ async function submitToEmail(payload: LeadPayload): Promise<boolean> {
     },
     body: JSON.stringify({
       _subject: enquiryEmailSubject(payload),
-      _template: 'box',
+      _template: 'table',
       _captcha: 'false',
       ...enquiryEmailFields(payload),
     }),

@@ -46,7 +46,7 @@ Copy `.env.example` to `.env` and adjust:
 | Variable                                             | Purpose                                                                                                    |
 | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | `VITE_SITE_URL`                                      | Canonical site URL for SEO, sitemap, Open Graph                                                            |
-| `VITE_CONTACT_API_URL`                               | Optional extra POST endpoint. Empty = email enquiries to `jadhavsagar698@gmail.com` |
+| `VITE_CONTACT_API_URL`                               | Optional extra POST endpoint. Empty = email enquiries to `drjsolutions5@gmail.com` |
 | `VITE_GA_MEASUREMENT_ID`                             | Optional Google Analytics ID (e.g. `G-XXXXXXXX`)                                                           |
 | `VITE_GOOGLE_MAPS_URL`                               | Optional Google Maps place URL                                                                             |
 | `VITE_GOOGLE_MAPS_EMBED_URL`                         | Optional Maps embed URL for the contact page                                                               |
@@ -56,7 +56,7 @@ Never put API secrets in `VITE_*` variables. Those values are exposed to the bro
 
 ## Connect a backend later
 
-Lead submissions go through `src/services/contactService.ts`. Each enquiry is emailed to **jadhavsagar698@gmail.com**. The first submission asks that inbox to confirm FormSubmit (check spam if needed); after that, new survey requests arrive as emails.
+Lead submissions go through `src/services/contactService.ts`. Each enquiry is emailed to **drjsolutions5@gmail.com**. The first submission asks that inbox to confirm FormSubmit (check spam if needed); after that, new survey requests arrive as emails.
 
 To add a CRM or your own API as well, set `VITE_CONTACT_API_URL`. The request body is JSON:
 
@@ -94,11 +94,11 @@ The site is a Vite SPA. `netlify.toml` sets the build, publish folder, Node 22, 
 | Variable                                              | Suggested value                                                                      |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | `VITE_SITE_URL`                                       | Your live URL, e.g. `https://www.drjsolutions.in` or `https://your-site.netlify.app` |
-| `VITE_CONTACT_API_URL`                                | Leave empty; enquiries go to **jadhavsagar698@gmail.com**                        |
+| `VITE_CONTACT_API_URL`                                | Leave empty; enquiries go to **drjsolutions5@gmail.com**                        |
 | `VITE_GA_MEASUREMENT_ID`                              | Optional, e.g. `G-XXXXXXXX`                                                          |
 | `VITE_GOOGLE_MAPS_URL` / `VITE_GOOGLE_MAPS_EMBED_URL` | Optional                                                                             |
 
-5. Deploy. Submit a test survey, then confirm the FormSubmit activation email sent to **jadhavsagar698@gmail.com** (also check Spam). After that, live enquiries arrive in that inbox.
+5. Deploy. Submit a test survey, then confirm the FormSubmit activation email sent to **drjsolutions5@gmail.com** (also check Spam). After that, live enquiries arrive in that inbox.
 6. Optional: Netlify → **Forms** → **Enable form detection**, then redeploy, if you also want a copy in **Forms → lead**.
 7. Point a custom domain at the site under **Domain management**. Then set `VITE_SITE_URL` to that domain and trigger a new deploy.
 
