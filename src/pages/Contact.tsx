@@ -10,9 +10,10 @@ import {
   PHONE_DISPLAY,
   ROUTES,
   telUrl,
+  emailUrl,
   whatsappUrl,
 } from '@/config/site';
-import { Phone, MessageCircle, MapPin, ExternalLink } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, ExternalLink, Mail } from 'lucide-react';
 import { track } from '@/services/analytics';
 import { localBusinessJsonLd } from '@/lib/schema';
 
@@ -52,6 +53,19 @@ export function ContactPage() {
               <span className="min-w-0">
                 <span className="block font-display text-lg text-navy">{t.contact.waTitle}</span>
                 <span className="mt-1 block text-sm text-muted">{t.contact.waBody}</span>
+              </span>
+            </a>
+            <a
+              href={emailUrl()}
+              className="card flex gap-4 p-4 sm:p-5 hover:shadow-lift"
+            >
+              <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-sun-soft text-sun-deep">
+                <Mail className="size-5" aria-hidden />
+              </span>
+              <span className="min-w-0">
+                <span className="block font-display text-lg text-navy">{t.contact.emailTitle}</span>
+                <span className="mt-1 block text-sm text-muted">{t.contact.emailBody}</span>
+                <span className="mt-2 block font-semibold break-all text-navy">{BUSINESS.email}</span>
               </span>
             </a>
             <div className="card flex gap-4 p-4 sm:p-5">

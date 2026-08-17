@@ -7,6 +7,7 @@ export function localBusinessJsonLd() {
     name: BUSINESS.name,
     url: siteUrl(),
     telephone: PHONE_E164,
+    email: BUSINESS.email,
     address: {
       '@type': 'PostalAddress',
       streetAddress: `${BUSINESS.address.line1}, ${BUSINESS.address.line2}, ${BUSINESS.address.line3}`,
@@ -19,7 +20,7 @@ export function localBusinessJsonLd() {
       name,
     })),
     description:
-      'Rooftop solar solutions in Satara, Maharashtra. Free site survey and consultation for residential and commercial properties.',
+      'Rooftop solar solutions for homes and businesses. Free site survey and consultation for residential and commercial properties. Office in Satara, Maharashtra.',
   };
 }
 

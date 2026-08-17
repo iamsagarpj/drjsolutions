@@ -6,7 +6,7 @@ export const en: SiteContent = {
   dir: 'ltr',
   brand: {
     short: 'DRJ Solutions',
-    tagline: 'Rooftop solar for Satara homes and businesses',
+    tagline: 'Rooftop solar for homes and businesses',
     footerBlurb:
       'Reliable rooftop solar solutions for a smarter, cleaner and more sustainable future.',
   },
@@ -42,7 +42,7 @@ export const en: SiteContent = {
     submitSurvey: 'Request Free Site Survey',
   },
   common: {
-    serving: 'Serving Satara & surrounding areas',
+    serving: 'Projects at any location — no service-area limit',
     indicative: 'Indicative Estimate',
     placeholderNote: 'Placeholder visual — replace with a DRJ Solutions project photo.',
     comingSoon: 'Customer stories coming soon',
@@ -64,9 +64,9 @@ export const en: SiteContent = {
     homeLabel: 'Home',
   },
   details: {
-    serviceAreaTitle: 'Local to Satara',
+    serviceAreaTitle: 'Where we work',
     serviceAreaBody:
-      'DRJ Solutions works from Yadogopal Peth, Satara. We help independent houses, shops and local businesses in Satara and surrounding areas through a free site survey. If you are nearby and unsure whether we cover your locality, call or WhatsApp — we will tell you honestly.',
+      'DRJ Solutions is based at Yadogopal Peth, Satara, Maharashtra. We take rooftop solar projects for homes, shops and businesses at any location — there is no service-area boundary. Book a free site survey from wherever you are, or call / WhatsApp to discuss your site.',
     surveyPrepTitle: 'Keep these ready for a useful site survey',
     surveyPrep: [
       'A recent electricity bill (last one to three months if you have them)',
@@ -115,10 +115,10 @@ export const en: SiteContent = {
       },
     ],
     calculatorAssumptions:
-      'Planning defaults for Satara: about 1,550 kWh generated per kW per year, and a unit rate you can edit. If your bill shows a different tariff, change that field. Results stay indicative until a site survey.',
-    terraceNoteTitle: 'Typical Satara roofs',
+      'Planning defaults: about 1,550 kWh generated per kW per year, and a unit rate you can edit. Change the location and tariff to match your bill. Results stay indicative until a site survey.',
+    terraceNoteTitle: 'Typical rooftops',
     terraceNote:
-      'Many independent houses in Satara have an RCC terrace with a water tank, solar water heater or dish antenna. Usable area is what remains after those objects and shade. A survey is how we measure that — not a guess from a photograph alone.',
+      'Many independent houses have an RCC terrace with a water tank, solar water heater or dish antenna. Usable area is what remains after those objects and shade. A survey is how we measure that — not a guess from a photograph alone.',
   },
   form: {
     title: 'Request a free site survey',
@@ -148,27 +148,27 @@ export const en: SiteContent = {
   },
   seo: {
     home: {
-      title: 'Rooftop Solar in Satara | DRJ Solutions',
+      title: 'Rooftop Solar | DRJ Solutions',
       description:
-        'DRJ Solutions provides rooftop solar solutions in Satara, Maharashtra. Book a free site survey and understand how solar can reduce your electricity bills.',
+        'DRJ Solutions provides rooftop solar solutions for homes and businesses at any location. Book a free site survey and understand how solar can reduce your electricity bills. Office in Satara, Maharashtra.',
     },
     about: {
-      title: 'About DRJ Solutions | Solar Company in Satara',
+      title: 'About DRJ Solutions | Rooftop Solar',
       description:
-        'DRJ Solutions is a local rooftop solar provider serving Satara and surrounding areas with site surveys, system planning and installation support.',
+        'DRJ Solutions is a rooftop solar provider based in Satara, Maharashtra, taking projects at any location — site surveys, system planning and installation support.',
     },
     residential: {
-      title: 'Residential Rooftop Solar in Satara | DRJ Solutions',
+      title: 'Residential Rooftop Solar | DRJ Solutions',
       description:
-        'Rooftop solar for homes, bungalows and independent houses in Satara. Understand suitability, process and book a free site survey.',
+        'Rooftop solar for homes, bungalows and independent houses. Understand suitability, process and book a free site survey.',
     },
     commercial: {
-      title: 'Commercial Solar in Satara | DRJ Solutions',
+      title: 'Commercial Solar | DRJ Solutions',
       description:
-        'Rooftop solar for shops, offices, clinics, schools and commercial buildings in Satara. Discuss your requirement with DRJ Solutions.',
+        'Rooftop solar for shops, offices, clinics, schools and commercial buildings. Discuss your requirement with DRJ Solutions.',
     },
     subsidy: {
-      title: 'Solar Subsidy in Satara | Guidance by DRJ Solutions',
+      title: 'Solar Subsidy | Guidance by DRJ Solutions',
       description:
         'Understand how rooftop solar subsidy generally works in India, what documents may be needed, and how DRJ Solutions can guide you through the process.',
     },
@@ -178,9 +178,9 @@ export const en: SiteContent = {
         'From consultation and bill analysis to free site survey, system design, installation and support — see how DRJ Solutions approaches rooftop solar.',
     },
     calculator: {
-      title: 'Solar Savings Calculator | DRJ Solutions Satara',
+      title: 'Solar Savings Calculator | DRJ Solutions',
       description:
-        'Get an indicative estimate of rooftop solar system size, generation and potential savings for Satara. Actual results need a site assessment.',
+        'Get an indicative estimate of rooftop solar system size, generation and potential savings. Actual results need a site assessment.',
     },
     projects: {
       title: 'Solar Projects Gallery | DRJ Solutions',
@@ -188,14 +188,14 @@ export const en: SiteContent = {
         'A gallery of rooftop solar visuals. Real DRJ Solutions project photos will replace placeholders as installations are documented.',
     },
     faq: {
-      title: 'Rooftop Solar FAQ | DRJ Solutions Satara',
+      title: 'Rooftop Solar FAQ | DRJ Solutions',
       description:
-        'Answers to common questions about rooftop solar, net metering, monsoon performance, maintenance, subsidy and system sizing in Satara.',
+        'Answers to common questions about rooftop solar, net metering, monsoon performance, maintenance, subsidy and system sizing.',
     },
     contact: {
-      title: 'Contact DRJ Solutions | Solar Site Survey in Satara',
+      title: 'Contact DRJ Solutions | Free Solar Site Survey',
       description:
-        'Call 9579792080, WhatsApp DRJ Solutions, or request a free rooftop solar site survey. Visit us at Yadogopal Peth, Satara.',
+        'Call 9579792080, WhatsApp DRJ Solutions, or request a free rooftop solar site survey from any location. Office: Yadogopal Peth, Satara.',
     },
     privacy: {
       title: 'Privacy Policy | DRJ Solutions',
@@ -211,12 +211,12 @@ export const en: SiteContent = {
     },
   },
   home: {
-    heroEyebrow: 'Rooftop solar · Satara, Maharashtra',
+    heroEyebrow: 'Rooftop solar · Homes and businesses',
     heroTitle: 'Take the power of the sun, and save thousands on electricity.',
     heroBody:
-      'Switch to rooftop solar and take control of your electricity costs with a reliable solar solution from DRJ Solutions.',
+      'Switch to rooftop solar and take control of your electricity costs. DRJ Solutions takes rooftop projects at any location — there is no service-area boundary.',
     trust: [
-      { title: 'Rooftop Solar Solutions', text: 'For homes and local businesses' },
+      { title: 'Rooftop Solar Solutions', text: 'For homes and businesses' },
       { title: 'Free Site Survey', text: 'Understand what your roof can do' },
       { title: 'Long-Term Performance', text: 'Designed for years of use' },
       { title: 'Low Maintenance', text: 'Simple upkeep after installation' },
@@ -243,7 +243,7 @@ export const en: SiteContent = {
     problemBridge: 'Make a smarter energy decision with rooftop solar from DRJ Solutions.',
     whyTitle: 'Why rooftop solar?',
     whyBody:
-      'Solar is not only an environmental choice. For many Satara households and shops, it is a long-term way to use the roof you already have.',
+      'Solar is not only an environmental choice. For many households and shops, it is a long-term way to use the roof you already have.',
     benefits: [
       {
         title: 'Meaningful bill reduction',
@@ -251,7 +251,7 @@ export const en: SiteContent = {
       },
       {
         title: 'Make use of sunlight',
-        text: 'Satara receives strong solar radiation for much of the year. Your terrace or sloping roof can become a productive asset.',
+        text: 'Much of India receives strong solar radiation for much of the year. Your terrace or sloping roof can become a productive asset.',
       },
       {
         title: 'Long-term financial value',
@@ -272,7 +272,7 @@ export const en: SiteContent = {
     ],
     whyDrjTitle: 'Why choose DRJ Solutions?',
     whyDrjBody:
-      'Solar is a significant decision. You need a local team that explains the process clearly, surveys the site properly, and stays available after installation.',
+      'Solar is a significant decision. You need a team that explains the process clearly, surveys the site properly, and stays available after installation.',
     advantages: [
       {
         title: 'Reliable rooftop systems',
@@ -303,13 +303,13 @@ export const en: SiteContent = {
         text: 'Site conditions, subsidy paperwork and warranty terms are discussed before you commit.',
       },
       {
-        title: 'Local Satara presence',
-        text: 'We are based in Yadogopal Peth, Satara — close enough to visit, advise and support.',
+        title: 'Work at any location',
+        text: 'Our office is in Yadogopal Peth, Satara. We take projects anywhere — there is no service-area limit — and stay available for surveys, advice and support.',
       },
     ],
     solutionsTitle: 'Solar for homes and businesses',
     solutionsBody:
-      'Whether you run a household in Satara or a shop, clinic or office, rooftop solar can be planned around your actual electricity use.',
+      'Whether you run a household, shop, clinic or office, rooftop solar can be planned around your actual electricity use.',
     residentialCard: {
       title: 'Residential solar',
       text: 'Independent houses, bungalows and villas. Sized around your bill, roof and family usage.',
@@ -337,18 +337,18 @@ export const en: SiteContent = {
   },
   about: {
     eyebrow: 'About us',
-    title: 'A local solar partner for Satara',
+    title: 'A solar partner for homes and businesses',
     intro:
-      'DRJ Solutions provides rooftop solar solutions for homes and businesses in Satara and surrounding areas. We help customers understand solar clearly, plan a system that fits the property, and move from enquiry to installation with practical support.',
+      'DRJ Solutions provides rooftop solar solutions for homes and businesses at any location. We help customers understand solar clearly, plan a system that fits the property, and move from enquiry to installation with practical support.',
     missionTitle: 'Our mission',
     mission:
-      'To make rooftop solar understandable and accessible for families and local businesses — so sunlight on Satara roofs becomes reliable, useful electricity.',
+      'To make rooftop solar understandable and accessible for families and businesses — so sunlight on your roof becomes reliable, useful electricity.',
     approachTitle: 'Customer-first approach',
     approach:
       'We start with listening: your bill, your roof, your questions. We do not push a standard package. A free site survey comes before any serious proposal, because shade, structure and consumption decide what is actually suitable.',
-    localTitle: 'Local service',
+    localTitle: 'Office and reach',
     local:
-      'We work from Yadogopal Peth, Satara. Being nearby matters for surveys, coordination and after-sales support. If you want to talk before filling a form, call or WhatsApp us.',
+      'Our office is at Yadogopal Peth, Satara, Maharashtra. We take rooftop solar projects at any location — there is no service-area boundary. If you want to talk before filling a form, call or WhatsApp us.',
     ownerPlaceholderTitle: 'Leadership & team',
     ownerPlaceholder:
       'Founder details, team profiles and photographs can be added here when the business owner shares them. We have not invented names, years or awards.',
@@ -369,14 +369,14 @@ export const en: SiteContent = {
   },
   residential: {
     eyebrow: 'Residential solar',
-    title: 'Rooftop solar for homes in Satara',
+    title: 'Rooftop solar for homes',
     intro:
-      'If you own an independent house, bungalow or villa, your roof can generate electricity for daily use. DRJ Solutions helps Satara homeowners understand whether solar is suitable — and what size of system makes sense.',
+      'If you own an independent house, bungalow or villa, your roof can generate electricity for daily use. DRJ Solutions helps homeowners understand whether solar is suitable — and what size of system makes sense.',
     whatTitle: 'What is rooftop solar?',
     what: 'Rooftop solar places photovoltaic panels on your terrace or sloping roof. The panels convert sunlight into electricity that your home can use during the day. Where net metering is available, surplus units may be accounted against grid consumption as per the local electricity rules.',
     whoTitle: 'Who is it suitable for?',
     who: [
-      'Independent house owners in Satara and nearby areas',
+      'Independent house owners at any location',
       'Bungalows and villas with usable roof area',
       'Homes with a regular electricity bill they want to reduce',
       'Families planning a long-term energy decision, not a short gadget purchase',
@@ -408,7 +408,7 @@ export const en: SiteContent = {
       },
       {
         title: 'Roof orientation & tilt',
-        text: 'South-facing, unshaded surfaces generally perform better in this region.',
+        text: 'South-facing, unshaded surfaces generally perform better in India.',
       },
       {
         title: 'Shade',
@@ -428,9 +428,9 @@ export const en: SiteContent = {
   },
   commercial: {
     eyebrow: 'Commercial solar',
-    title: 'Solar for shops, offices and local businesses',
+    title: 'Solar for shops, offices and businesses',
     intro:
-      'If your business pays a substantial electricity bill, rooftop solar can be part of a longer energy plan. DRJ Solutions works with shops, offices, clinics, schools and small commercial buildings in the Satara region.',
+      'If your business pays a substantial electricity bill, rooftop solar can be part of a longer energy plan. DRJ Solutions works with shops, offices, clinics, schools and commercial buildings at any location.',
     whoTitle: 'Who we typically speak with',
     who: [
       'Retail shops and showrooms',
@@ -465,7 +465,7 @@ export const en: SiteContent = {
     eyebrow: 'Solar subsidy',
     title: 'Understand rooftop solar subsidy — without the confusion',
     intro:
-      'Many homeowners in Satara ask about government subsidy before anything else. That is reasonable. Subsidy can improve project economics — but eligibility, documents and amounts depend on current government rules, not on a website paragraph.',
+      'Many homeowners ask about government subsidy before anything else. That is reasonable. Subsidy can improve project economics — but eligibility, documents and amounts depend on current government rules, not on a website paragraph.',
     disclaimer:
       'This page is guidance, not legal or financial advice. Scheme names, slab amounts and processes change. Always verify on official government portals before you make a decision.',
     sections: [
@@ -534,7 +534,7 @@ export const en: SiteContent = {
     eyebrow: 'Planning tool',
     title: 'Solar savings calculator',
     intro:
-      'Enter your monthly bill to see an indicative system range for Satara. This is a planning estimate — not a quotation and not a guaranteed return.',
+      'Enter your monthly bill to see an indicative system range for your location. This is a planning estimate — not a quotation and not a guaranteed return.',
     billLabel: 'Monthly electricity bill (₹)',
     consumptionLabel: 'Average monthly consumption (kWh)',
     roofLabel: 'Roof availability',
@@ -595,7 +595,7 @@ export const en: SiteContent = {
         location: 'Visual reference',
         details: 'To be added',
         description:
-          'Replace with a completed array photograph showing the actual roof type in Satara.',
+          'Replace with a completed array photograph showing the actual roof type.',
       },
     ],
   },
@@ -603,7 +603,7 @@ export const en: SiteContent = {
     eyebrow: 'FAQ',
     title: 'Common questions about rooftop solar',
     intro:
-      'These answers are written for Satara homeowners. They are educational — a site survey is still needed before any proposal.',
+      'These answers are written for homeowners and businesses. They are educational — a site survey is still needed before any proposal.',
     items: [
       {
         q: 'What is rooftop solar?',
@@ -666,11 +666,14 @@ export const en: SiteContent = {
   contact: {
     eyebrow: 'Contact',
     title: 'Talk to DRJ Solutions',
-    intro: 'Call, WhatsApp, or request a free site survey. We are based in Yadogopal Peth, Satara.',
+    intro:
+      'Call, WhatsApp, or request a free site survey from any location. Our office is at Yadogopal Peth, Satara.',
     callTitle: 'Call us',
     callBody: 'Speak with us about your bill, roof or a site visit.',
     waTitle: 'WhatsApp',
     waBody: 'Send a message with your locality and a recent bill amount if you have it.',
+    emailTitle: 'Email',
+    emailBody: 'Write to us and we will reply to your enquiry.',
     addressTitle: 'Visit / write to us',
     mapTitle: 'Location',
     mapPlaceholder:
@@ -681,9 +684,8 @@ export const en: SiteContent = {
     privacyTitle: 'Privacy Policy',
     privacyBody: [
       'This website is operated by DRJ Solutions, Satara. When you submit an enquiry form, we collect the information you enter — typically your name, phone number, city, optional electricity bill amount, property type and message.',
-      'We use this information only to respond to your rooftop solar enquiry. We do not sell your details. If a backend, CRM or messaging service is connected later, the same purpose applies.',
-      'Leads submitted while no server is configured may be stored in your browser until an API is connected; treat that as a temporary development behaviour, not a marketing database.',
-      'You can ask us to update or remove enquiry details by calling 9579792080.',
+      'We use this information only to respond to your rooftop solar enquiry. Submissions are emailed to DRJ Solutions at dhirajkenjale5@gmail.com. We do not sell your details.',
+      'You can ask us to update or remove enquiry details by calling 9579792080 or emailing dhirajkenjale5@gmail.com.',
       'This page is a working privacy notice and can be reviewed by the business owner or a legal advisor before wider public launch.',
     ],
     termsTitle: 'Terms & Conditions',

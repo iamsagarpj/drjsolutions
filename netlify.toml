@@ -5,7 +5,7 @@
 [build.environment]
   NODE_VERSION = "22"
 
-# SPA fallback. Netlify Forms still receive POSTs to / before this rewrite.
+# SPA fallback for client routes. Static files such as /__forms.html are served first.
 [[redirects]]
   from = "/*"
   to = "/index.html"

@@ -109,6 +109,7 @@ export function SavingsCalculator({ embedded = false }: { embedded?: boolean }) 
               <input
                 className="field bg-white text-ink"
                 value={location}
+                placeholder={t.form.city}
                 onChange={(e) => setLocation(e.target.value)}
               />
             </label>

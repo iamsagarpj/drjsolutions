@@ -9,9 +9,10 @@ import {
   PHONE_DISPLAY,
   ROUTES,
   telUrl,
+  emailUrl,
   whatsappUrl,
 } from '@/config/site';
-import { Phone, MapPin } from 'lucide-react';
+import { Phone, MapPin, Mail } from 'lucide-react';
 
 export function Footer() {
   const { t } = useLanguage();
@@ -74,6 +75,15 @@ export function Footer() {
               <a href={telUrl()} className="inline-flex items-center gap-2 hover:text-white">
                 <Phone className="size-4 text-sun" aria-hidden />
                 {PHONE_DISPLAY}
+              </a>
+            </li>
+            <li>
+              <a
+                href={emailUrl()}
+                className="inline-flex items-center gap-2 break-all hover:text-white"
+              >
+                <Mail className="size-4 shrink-0 text-sun" aria-hidden />
+                {BUSINESS.email}
               </a>
             </li>
             <li>

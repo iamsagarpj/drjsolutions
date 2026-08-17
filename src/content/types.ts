@@ -220,6 +220,8 @@ export type SiteContent = {
     callBody: string;
     waTitle: string;
     waBody: string;
+    emailTitle: string;
+    emailBody: string;
     addressTitle: string;
     mapTitle: string;
     mapPlaceholder: string;

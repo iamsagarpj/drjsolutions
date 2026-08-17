@@ -1,9 +1,9 @@
-/** Indicative calculator assumptions for Satara / western Maharashtra.
+/** Indicative calculator assumptions for typical Indian rooftop conditions.
  *  These are planning defaults, not guaranteed performance figures.
- *  Update after a local yield study if more precise data is available.
+ *  Update after a site-specific yield study if more precise data is available.
  */
 export const CALCULATOR_DEFAULTS = {
-  locationLabel: 'Satara, Maharashtra',
+  locationLabel: '',
   defaultTariffInrPerKwh: 9,
   specificYieldKwhPerKwYear: 1550,
   selfConsumptionFactor: 0.88,

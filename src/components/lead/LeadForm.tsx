@@ -42,7 +42,7 @@ export function LeadForm({
     defaultValues: {
       name: '',
       phone: '',
-      city: 'Satara',
+      city: '',
       monthlyBill: '',
       propertyType: 'residential',
       message: '',

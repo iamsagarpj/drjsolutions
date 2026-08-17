@@ -1,6 +1,6 @@
 # DRJ Solutions website
 
-Production-ready lead-generation website for **DRJ Solutions**, a rooftop solar business in Satara, Maharashtra.
+Production-ready lead-generation website for **DRJ Solutions**, a rooftop solar business based in Satara, Maharashtra, that takes projects at any location.
 
 ## Pages
 
@@ -46,7 +46,7 @@ Copy `.env.example` to `.env` and adjust:
 | Variable                                             | Purpose                                                                                                    |
 | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | `VITE_SITE_URL`                                      | Canonical site URL for SEO, sitemap, Open Graph                                                            |
-| `VITE_CONTACT_API_URL`                               | Optional POST endpoint for lead forms. Empty = Netlify Forms in production, local storage in `npm run dev` |
+| `VITE_CONTACT_API_URL`                               | Optional extra POST endpoint. Empty = email enquiries to `dhirajkenjale5@gmail.com` |
 | `VITE_GA_MEASUREMENT_ID`                             | Optional Google Analytics ID (e.g. `G-XXXXXXXX`)                                                           |
 | `VITE_GOOGLE_MAPS_URL`                               | Optional Google Maps place URL                                                                             |
 | `VITE_GOOGLE_MAPS_EMBED_URL`                         | Optional Maps embed URL for the contact page                                                               |
@@ -56,7 +56,9 @@ Never put API secrets in `VITE_*` variables. Those values are exposed to the bro
 
 ## Connect a backend later
 
-Lead submissions go through `src/services/contactService.ts`. On Netlify, leave `VITE_CONTACT_API_URL` empty to collect leads in **Forms → lead**. To use your own API instead, set `VITE_CONTACT_API_URL` to FastAPI, Node, Firebase, Supabase, a CRM webhook, or an email worker. The request body is JSON:
+Lead submissions go through `src/services/contactService.ts`. Each enquiry is emailed to **dhirajkenjale5@gmail.com**. The first submission asks that inbox to confirm FormSubmit (check spam if needed); after that, new survey requests arrive as emails.
+
+To add a CRM or your own API as well, set `VITE_CONTACT_API_URL`. The request body is JSON:
 
 ```json
 {
@@ -92,16 +94,17 @@ The site is a Vite SPA. `netlify.toml` sets the build, publish folder, Node 22, 
 | Variable                                              | Suggested value                                                                      |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | `VITE_SITE_URL`                                       | Your live URL, e.g. `https://www.drjsolutions.in` or `https://your-site.netlify.app` |
-| `VITE_CONTACT_API_URL`                                | Leave empty to collect leads in **Netlify → Forms** (`lead`)                         |
+| `VITE_CONTACT_API_URL`                                | Leave empty; enquiries go to **dhirajkenjale5@gmail.com**                        |
 | `VITE_GA_MEASUREMENT_ID`                              | Optional, e.g. `G-XXXXXXXX`                                                          |
 | `VITE_GOOGLE_MAPS_URL` / `VITE_GOOGLE_MAPS_EMBED_URL` | Optional                                                                             |
 
-5. Deploy. After the first production submit, open **Forms → lead** to see enquiries.
-6. Point a custom domain at the site under **Domain management**. Then set `VITE_SITE_URL` to that domain and trigger a new deploy.
+5. Deploy. Submit a test survey, then confirm the FormSubmit activation email sent to **dhirajkenjale5@gmail.com** (also check Spam). After that, live enquiries arrive in that inbox.
+6. Optional: Netlify → **Forms** → **Enable form detection**, then redeploy, if you also want a copy in **Forms → lead**.
+7. Point a custom domain at the site under **Domain management**. Then set `VITE_SITE_URL` to that domain and trigger a new deploy.
 
 SPA routes (`/about`, `/contact`, …) are rewritten to `index.html` via `netlify.toml` and `public/_redirects`.
 
-Local development still saves leads in the browser until you connect an API. Never put private API keys in `VITE_*` variables.
+Never put private API keys in `VITE_*` variables.
 
 ## Replace before launch
 
@@ -110,6 +113,5 @@ Local development still saves leads in the browser until you connect an API. Nev
 - Google Maps embed URL
 - Verified subsidy amounts (leave empty until confirmed)
 - Founder / team details on the About page
-- Optional email address
 
 # drjsolutions

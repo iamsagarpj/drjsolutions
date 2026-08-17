@@ -10,7 +10,7 @@ export const BUSINESS = {
   phone: PHONE_LOCAL,
   phoneE164: PHONE_E164,
   phoneDisplay: PHONE_DISPLAY,
-  email: '', // add when provided
+  email: 'dhirajkenjale5@gmail.com',
   address: {
     line1: 'Flat No ST 03, 7 Hills Apartment',
     line2: 'Near Samartha Mandir Road',
@@ -20,7 +20,7 @@ export const BUSINESS = {
     postalCode: '',
     country: 'India',
   },
-  areaServed: ['Satara', 'Maharashtra'],
+  areaServed: ['India'],
 } as const;
 
 export function formattedAddress(): string {
@@ -51,6 +51,10 @@ export function whatsappUrl(message = DEFAULT_WHATSAPP_MESSAGE): string {
 
 export function telUrl(): string {
   return `tel:${PHONE_E164}`;
+}
+
+export function emailUrl(): string {
+  return `mailto:${BUSINESS.email}`;
 }
 
 export const ROUTES = {
