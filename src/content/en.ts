@@ -684,8 +684,8 @@ export const en: SiteContent = {
     privacyTitle: 'Privacy Policy',
     privacyBody: [
       'This website is operated by DRJ Solutions, Satara. When you submit an enquiry form, we collect the information you enter — typically your name, phone number, city, optional electricity bill amount, property type and message.',
-      'We use this information only to respond to your rooftop solar enquiry. Submissions are emailed to DRJ Solutions at dhirajkenjale5@gmail.com. We do not sell your details.',
-      'You can ask us to update or remove enquiry details by calling 9579792080 or emailing dhirajkenjale5@gmail.com.',
+      'We use this information only to respond to your rooftop solar enquiry. Submissions are emailed to DRJ Solutions at {email}. We do not sell your details.',
+      'You can ask us to update or remove enquiry details by calling 9579792080 or emailing {email}.',
       'This page is a working privacy notice and can be reviewed by the business owner or a legal advisor before wider public launch.',
     ],
     termsTitle: 'Terms & Conditions',

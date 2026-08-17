@@ -1,5 +1,6 @@
 import { track } from '@/services/analytics';
 import { BUSINESS } from '@/config/site';
+import { enquiryEmailFields, enquiryEmailSubject } from '@/lib/enquiryEmail';
 
 export type PropertyType = 'residential' | 'shop' | 'office' | 'commercial' | 'other';
 
@@ -43,17 +44,10 @@ async function submitToEmail(payload: LeadPayload): Promise<boolean> {
       Accept: 'application/json',
     },
     body: JSON.stringify({
-      _subject: `DRJ Solutions enquiry — ${payload.name}`,
-      _template: 'table',
+      _subject: enquiryEmailSubject(payload),
+      _template: 'box',
       _captcha: 'false',
-      name: payload.name,
-      phone: payload.phone,
-      city: payload.city,
-      monthlyBill: payload.monthlyBill || 'Not provided',
-      propertyType: payload.propertyType,
-      message: payload.message || '—',
-      source: payload.source ?? 'website',
-      language: payload.language ?? 'en',
+      ...enquiryEmailFields(payload),
     }),
   });
 

@@ -2,7 +2,7 @@ import { PageHero } from '@/components/layout/PageHero';
 import { Seo } from '@/components/layout/Seo';
 import { Container } from '@/components/ui/Container';
 import { useLanguage } from '@/i18n/useLanguage';
-import { ROUTES } from '@/config/site';
+import { BUSINESS, ROUTES } from '@/config/site';
 
 export function PrivacyPage() {
   const { t } = useLanguage();
@@ -14,7 +14,7 @@ export function PrivacyPage() {
         <Container narrow>
           <div className="space-y-5 text-muted leading-relaxed">
             {t.legal.privacyBody.map((p) => (
-              <p key={p}>{p}</p>
+              <p key={p}>{p.replaceAll('{email}', BUSINESS.email)}</p>
             ))}
           </div>
         </Container>
