@@ -1,10 +1,11 @@
 import { Phone, ShieldCheck, SunMedium, Wrench, MapPinned } from 'lucide-react';
 import { Button, ButtonLink } from '@/components/ui/Button';
+import { Photo } from '@/components/ui/Photo';
+import { Reveal } from '@/components/ui/Reveal';
 import { useLanguage } from '@/i18n/useLanguage';
 import { useLeadModal } from '@/components/lead/useLeadModal';
 import { PHONE_DISPLAY, telUrl } from '@/config/site';
 import { track } from '@/services/analytics';
-import { Reveal } from '@/components/ui/Reveal';
 
 const TRUST_ICONS = [SunMedium, MapPinned, ShieldCheck, Wrench];
 
@@ -14,7 +15,7 @@ export function Hero() {
 
   return (
     <section className="bg-paper">
-      <div className="grid lg:min-h-[min(42rem,calc(100svh-7.5rem))] lg:grid-cols-2">
+      <div className="grid lg:min-h-[min(40rem,calc(100svh-7.5rem))] lg:grid-cols-2">
         <div className="flex flex-col justify-center px-[var(--gutter)] py-10 sm:py-14 lg:py-16 lg:pl-[max(var(--gutter),calc((100vw-var(--container-wide))/2))] lg:pr-10 xl:pr-16">
           <Reveal className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sun-deep">
@@ -58,13 +59,11 @@ export function Hero() {
         </div>
 
         <div className="relative min-h-[16.5rem] sm:min-h-[22rem] lg:min-h-full">
-          <img
-            src="/images/rooftop-india.jpg"
-            alt="Rooftop solar panels on a residential roof in bright sunlight"
-            width={1400}
-            height={933}
-            fetchPriority="high"
-            className="absolute inset-0 size-full object-cover"
+          <Photo
+            id="hero"
+            eager
+            sizes="(max-width: 1023px) 100vw, 50vw"
+            className="absolute inset-0 size-full object-[center_40%]"
           />
         </div>
       </div>
@@ -82,9 +81,7 @@ export function Hero() {
                 <p className="mt-2 text-sm font-semibold leading-snug text-navy sm:text-[0.95rem]">
                   {item.title}
                 </p>
-                <p className="mt-1 hidden text-xs leading-relaxed text-muted sm:block">
-                  {item.text}
-                </p>
+                <p className="mt-1 hidden text-xs leading-relaxed text-muted sm:block">{item.text}</p>
               </li>
             );
           })}

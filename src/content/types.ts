@@ -1,3 +1,5 @@
+import type { PhotoId } from '@/config/photos';
+
 export type Language = 'en' | 'mr';
 
 export type NavItem = {
@@ -120,6 +122,7 @@ export type SiteContent = {
     faqBody: string;
     finalTitle: string;
     finalBody: string;
+    energyPath: Array<{ label: string; title: string; text: string }>;
   };
   about: {
     eyebrow: string;
@@ -199,7 +202,7 @@ export type SiteContent = {
     intro: string;
     items: Array<{
       id: string;
-      image: string;
+      image: PhotoId;
       propertyType: string;
       location: string;
       details: string;
@@ -243,5 +246,6 @@ export type SiteContent = {
     legal: string;
     privacy: string;
     terms: string;
+    photoCredit: string;
   };
 };

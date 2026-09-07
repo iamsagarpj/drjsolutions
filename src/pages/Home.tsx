@@ -53,14 +53,12 @@ export function HomePage() {
         </Container>
       </section>
       <SubsidyPreview />
-      <ProjectsGallery limit={2} />
+      <ProjectsGallery limit={4} />
       <FAQPreview />
       <section className="wrap pb-4">
         <div className="rounded-2xl border border-line bg-paper px-5 py-8 text-center sm:px-8">
           <p className="font-display text-lg text-navy">{t.common.comingSoon}</p>
-          <p className="mx-auto mt-2 max-w-2xl text-sm text-muted">
-            {t.common.customerStoriesSoon}
-          </p>
+          <p className="mx-auto mt-2 max-w-2xl text-sm text-muted">{t.common.customerStoriesSoon}</p>
         </div>
       </section>
       <FinalCTA />

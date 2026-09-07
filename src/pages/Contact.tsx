@@ -83,8 +83,16 @@ export function ContactPage() {
                   <br />
                   {BUSINESS.address.line3}
                   <br />
-                  {BUSINESS.address.city}, {BUSINESS.address.state}
+                  {BUSINESS.address.city}, {BUSINESS.address.state} {BUSINESS.address.postalCode}
                 </p>
+                <a
+                  href={mapsSearchUrl()}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-navy underline underline-offset-4"
+                >
+                  Google Maps <ExternalLink className="size-3.5" />
+                </a>
                 <p className="mt-3 text-xs text-faint">{t.contact.hoursPlaceholder}</p>
               </div>
             </div>
@@ -100,30 +108,23 @@ export function ContactPage() {
         <div className="wrap mt-10">
           <h2 className="text-xl sm:text-2xl">{t.contact.mapTitle}</h2>
           <div className="mt-4 overflow-hidden rounded-2xl border border-line bg-sky">
-            {embed ? (
-              <iframe
-                title={t.contact.mapTitle}
-                src={embed}
-                className="h-64 w-full sm:h-80"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            ) : (
-              <div className="flex min-h-56 flex-col items-start justify-center gap-4 p-5 sm:min-h-72 sm:p-8">
-                <p className="max-w-xl text-sm leading-relaxed text-muted">
-                  {t.contact.mapPlaceholder}
-                </p>
-                <a
-                  href={mapsSearchUrl()}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn btn-navy w-full sm:w-auto"
-                >
-                  <ExternalLink className="size-4" /> Google Maps
-                </a>
-              </div>
-            )}
+            <iframe
+              title={t.contact.mapTitle}
+              src={embed}
+              className="h-64 w-full sm:h-80"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
           </div>
+          <a
+            href={mapsSearchUrl()}
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-ghost mt-4 w-full sm:w-auto"
+          >
+            <ExternalLink className="size-4" /> Google Maps
+          </a>
         </div>
       </section>
       <SurveyPrep />

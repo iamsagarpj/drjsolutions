@@ -6,6 +6,7 @@ import { useLeadModal } from '@/components/lead/useLeadModal';
 import {
   BUSINESS,
   formattedAddress,
+  mapsSearchUrl,
   PHONE_DISPLAY,
   ROUTES,
   telUrl,
@@ -91,17 +92,24 @@ export function Footer() {
                 WhatsApp
               </a>
             </li>
-            <li className="flex items-start gap-2">
-              <MapPin className="mt-0.5 size-4 shrink-0 text-sun" aria-hidden />
-              <span>
-                {BUSINESS.address.line1}
-                <br />
-                {BUSINESS.address.line2}
-                <br />
-                {BUSINESS.address.line3}
-                <br />
-                {BUSINESS.address.city}, {BUSINESS.address.state}
-              </span>
+            <li>
+              <a
+                href={mapsSearchUrl()}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-start gap-2 hover:text-white"
+              >
+                <MapPin className="mt-0.5 size-4 shrink-0 text-sun" aria-hidden />
+                <span>
+                  {BUSINESS.address.line1}
+                  <br />
+                  {BUSINESS.address.line2}
+                  <br />
+                  {BUSINESS.address.line3}
+                  <br />
+                  {BUSINESS.address.city}, {BUSINESS.address.state} {BUSINESS.address.postalCode}
+                </span>
+              </a>
             </li>
           </ul>
         </div>
@@ -127,7 +135,7 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10 py-5">
         <p className="wrap-wide text-xs text-white/45">
-          © {new Date().getFullYear()} {BUSINESS.name}. {BUSINESS.address.city}.
+          © {new Date().getFullYear()} {BUSINESS.name}. {BUSINESS.address.city}. {t.footer.photoCredit}
         </p>
       </div>
     </footer>

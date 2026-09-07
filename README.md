@@ -109,8 +109,7 @@ Never put private API keys in `VITE_*` variables.
 ## Replace before launch
 
 - Real DRJ Solutions logo if a separate asset is supplied (current mark is a clean treatment, not a traced flyer)
-- Project gallery photos (`public/images/` — placeholders are labelled in the UI)
-- Google Maps embed URL
+- Project gallery photos (swap IDs in `src/config/photos.ts` — CDN delivers the right size)
 - Verified subsidy amounts (leave empty until confirmed)
 - Founder / team details on the About page
 

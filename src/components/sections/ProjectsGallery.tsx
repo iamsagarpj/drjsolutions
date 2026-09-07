@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { SectionHeading } from '@/components/ui/SectionHeading';
+import { Photo } from '@/components/ui/Photo';
 import { Reveal, Stagger, StaggerItem } from '@/components/ui/Reveal';
 import { useLanguage } from '@/i18n/useLanguage';
 import { ROUTES } from '@/config/site';
-import { track } from '@/services/analytics';
 
 export function ProjectsGallery({
   limit,
@@ -27,15 +27,12 @@ export function ProjectsGallery({
           {items.map((item) => (
             <StaggerItem key={item.id}>
               <article className="card overflow-hidden">
-                <div className="relative">
-                  <img
-                    src={item.image}
-                    alt={item.propertyType}
-                    className="aspect-[16/10] w-full object-cover"
-                    loading="lazy"
-                    onClick={() => track('project_view', { id: item.id })}
-                  />
-                </div>
+                <Photo
+                  id={item.image}
+                  alt={item.propertyType}
+                  className="aspect-[16/10]"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
                 <div className="p-5">
                   <p className="text-xs font-semibold uppercase tracking-wider text-navy-muted">
                     {item.propertyType} · {item.location}

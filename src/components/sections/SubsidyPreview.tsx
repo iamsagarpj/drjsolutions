@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SectionHeading } from '@/components/ui/SectionHeading';
+import { Photo } from '@/components/ui/Photo';
 import { Reveal } from '@/components/ui/Reveal';
 import { Button } from '@/components/ui/Button';
 import { useLanguage } from '@/i18n/useLanguage';
@@ -37,11 +38,11 @@ export function SubsidyPreview() {
               </div>
             </Reveal>
           </div>
-          <img
-            src="/images/sunlight.jpg"
-            alt="Sunlight over a landscape, representing solar energy"
-            className="hidden h-full min-h-64 w-full object-cover lg:block"
-            loading="lazy"
+          <Photo
+            id="array"
+            alt="Solar panels on a green field"
+            className="hidden h-full min-h-64 lg:block"
+            sizes="50vw"
           />
         </div>
       </div>

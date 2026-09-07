@@ -5,6 +5,7 @@ import { SurveyPrep } from '@/components/sections/SurveyPrep';
 import { useLanguage } from '@/i18n/useLanguage';
 import { useLeadModal } from '@/components/lead/useLeadModal';
 import { ROUTES } from '@/config/site';
+import { Photo } from '@/components/ui/Photo';
 import { Check } from 'lucide-react';
 
 export function CommercialPage() {
@@ -18,11 +19,11 @@ export function CommercialPage() {
       <PageHero eyebrow={p.eyebrow} title={p.title} body={p.intro} />
       <section className="section-y">
         <div className="wrap grid gap-8 lg:grid-cols-2 lg:gap-10">
-          <img
-            src="/images/residential.jpg"
-            alt="Commercial rooftop solar installation at sunset"
-            className="aspect-[4/3] w-full rounded-2xl object-cover"
-            loading="lazy"
+          <Photo
+            id="commercial"
+            alt="Daylight rooftop solar array on a commercial building"
+            className="aspect-[4/3] overflow-hidden rounded-2xl"
+            sizes="(max-width: 1023px) 100vw, 50vw"
           />
           <div className="min-w-0">
             <h2 className="text-xl sm:text-2xl">{p.whoTitle}</h2>

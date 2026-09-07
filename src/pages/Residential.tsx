@@ -6,6 +6,7 @@ import { SurveyPrep } from '@/components/sections/SurveyPrep';
 import { useLanguage } from '@/i18n/useLanguage';
 import { useLeadModal } from '@/components/lead/useLeadModal';
 import { ROUTES } from '@/config/site';
+import { Photo } from '@/components/ui/Photo';
 import { Check } from 'lucide-react';
 
 export function ResidentialPage() {
@@ -22,11 +23,11 @@ export function ResidentialPage() {
           <div className="min-w-0">
             <h2 className="text-xl sm:text-2xl">{p.whatTitle}</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">{p.what}</p>
-            <img
-              src="/images/rooftop-india.jpg"
-              alt="Residential rooftop solar close-up"
-              className="mt-6 aspect-[16/10] w-full rounded-2xl object-cover"
-              loading="lazy"
+            <Photo
+              id="residential"
+              alt="House with rooftop solar in a green landscape"
+              className="mt-6 aspect-[16/10] overflow-hidden rounded-2xl"
+              sizes="(max-width: 1023px) 100vw, 50vw"
             />
             <div className="mt-6 rounded-2xl border border-line bg-sky p-5">
               <h3 className="text-lg">{t.details.terraceNoteTitle}</h3>

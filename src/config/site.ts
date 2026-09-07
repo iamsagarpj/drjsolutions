@@ -12,30 +12,38 @@ export const BUSINESS = {
   phoneDisplay: PHONE_DISPLAY,
   email: 'drjsolutions5@gmail.com',
   address: {
-    line1: 'Flat No ST 03, 7 Hills Apartment',
-    line2: 'Near Samartha Mandir Road',
-    line3: 'Yadogopal Peth',
+    line1: '7 Hills Apartment',
+    line2: '18, Shri Chhatrapati Shahu Maharaj Rd',
+    line3: 'Anand Nagar, Zunjar Colony',
     city: 'Satara',
     state: 'Maharashtra',
-    postalCode: '',
+    postalCode: '415002',
     country: 'India',
   },
   areaServed: ['India'],
 } as const;
 
+/** Exact query Google Maps should open for the office. */
+export const MAPS_QUERY =
+  '7 hills apartment, 18, Shri Chhatrapati Shahu Maharaj Rd, Anand Nagar, Zunjar Colony, Satara, Maharashtra 415002';
+
 export function formattedAddress(): string {
-  const { line1, line2, line3, city, state, country } = BUSINESS.address;
-  return [line1, line2, line3, `${city}, ${state}`, country].filter(Boolean).join(', ');
+  const { line1, line2, line3, city, state, postalCode, country } = BUSINESS.address;
+  return [line1, line2, line3, `${city}, ${state} ${postalCode}`.trim(), country]
+    .filter(Boolean)
+    .join(', ');
 }
 
 export function mapsSearchUrl(): string {
   const configured = import.meta.env.VITE_GOOGLE_MAPS_URL;
   if (configured) return configured;
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(formattedAddress())}`;
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAPS_QUERY)}`;
 }
 
-export function mapsEmbedUrl(): string | null {
-  return import.meta.env.VITE_GOOGLE_MAPS_EMBED_URL || null;
+export function mapsEmbedUrl(): string {
+  const configured = import.meta.env.VITE_GOOGLE_MAPS_EMBED_URL;
+  if (configured) return configured;
+  return `https://maps.google.com/maps?q=${encodeURIComponent(MAPS_QUERY)}&z=17&output=embed`;
 }
 
 export function siteUrl(): string {

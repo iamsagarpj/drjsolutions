@@ -44,7 +44,7 @@ export const en: SiteContent = {
   common: {
     serving: 'Projects at any location — no service-area limit',
     indicative: 'Indicative Estimate',
-    placeholderNote: 'Placeholder visual — replace with a DRJ Solutions project photo.',
+    placeholderNote: 'Illustrative rooftop solar photography — not a documented DRJ installation.',
     comingSoon: 'Customer stories coming soon',
     customerStoriesSoon:
       'Verified customer stories will appear here once they are shared with us. We do not publish reviews that we cannot stand behind.',
@@ -66,7 +66,7 @@ export const en: SiteContent = {
   details: {
     serviceAreaTitle: 'Where we work',
     serviceAreaBody:
-      'DRJ Solutions is based at Yadogopal Peth, Satara, Maharashtra. We take rooftop solar projects for homes, shops and businesses at any location — there is no service-area boundary. Book a free site survey from wherever you are, or call / WhatsApp to discuss your site.',
+      'DRJ Solutions is based at 7 Hills Apartment, Anand Nagar, Satara, Maharashtra. We take rooftop solar projects for homes, shops and businesses at any location — there is no service-area boundary. Book a free site survey from wherever you are, or call / WhatsApp to discuss your site.',
     surveyPrepTitle: 'Keep these ready for a useful site survey',
     surveyPrep: [
       'A recent electricity bill (last one to three months if you have them)',
@@ -185,7 +185,7 @@ export const en: SiteContent = {
     projects: {
       title: 'Solar Projects Gallery | DRJ Solutions',
       description:
-        'A gallery of rooftop solar visuals. Real DRJ Solutions project photos will replace placeholders as installations are documented.',
+        'A visual gallery of rooftop solar. Documented DRJ Solutions project photographs will be published as installations are recorded.',
     },
     faq: {
       title: 'Rooftop Solar FAQ | DRJ Solutions',
@@ -195,7 +195,7 @@ export const en: SiteContent = {
     contact: {
       title: 'Contact DRJ Solutions | Free Solar Site Survey',
       description:
-        'Call 9579792080, WhatsApp DRJ Solutions, or request a free rooftop solar site survey from any location. Office: Yadogopal Peth, Satara.',
+        'Call 9579792080, WhatsApp DRJ Solutions, or request a free rooftop solar site survey from any location. Office: 7 Hills Apartment, Anand Nagar, Satara.',
     },
     privacy: {
       title: 'Privacy Policy | DRJ Solutions',
@@ -304,7 +304,7 @@ export const en: SiteContent = {
       },
       {
         title: 'Work at any location',
-        text: 'Our office is in Yadogopal Peth, Satara. We take projects anywhere — there is no service-area limit — and stay available for surveys, advice and support.',
+        text: 'Our office is at 7 Hills Apartment, Anand Nagar, Satara. We take projects anywhere — there is no service-area limit — and stay available for surveys, advice and support.',
       },
     ],
     solutionsTitle: 'Solar for homes and businesses',
@@ -328,12 +328,34 @@ export const en: SiteContent = {
     subsidyCta: 'Understand solar subsidy',
     projectsTitle: 'Projects & gallery',
     projectsBody:
-      'This gallery is ready for real DRJ Solutions installations. Placeholder images are labelled as such until project photos are added.',
+      'Rooftop solar, shown as a visual journey. Documented DRJ Solutions installations will be published here as they are available.',
     faqTitle: 'Questions homeowners usually ask',
     faqBody: 'Straight answers on bills, monsoon, net metering, space and maintenance.',
     finalTitle: 'Is solar right for your home?',
     finalBody:
       'A free site survey is the most reliable way to know. We look at your roof, your bill and your goals — then we explain the options.',
+    energyPath: [
+      {
+        label: 'Sun',
+        title: 'Make use of sunlight',
+        text: 'Much of India receives strong solar radiation for much of the year. Your terrace or sloping roof can become a productive asset.',
+      },
+      {
+        label: 'Panels',
+        title: 'Solar modules',
+        text: 'Panels convert sunlight into DC electricity. The system on your roof is planned around shade, orientation and the space you actually have.',
+      },
+      {
+        label: 'Energy',
+        title: 'Meaningful bill reduction',
+        text: 'A well-sized system can offset a large share of daytime consumption. Exact savings depend on your usage and tariff.',
+      },
+      {
+        label: 'Home',
+        title: 'Greater energy independence',
+        text: 'With net metering where available, surplus daytime generation can be accounted against your grid consumption.',
+      },
+    ],
   },
   about: {
     eyebrow: 'About us',
@@ -348,7 +370,7 @@ export const en: SiteContent = {
       'We start with listening: your bill, your roof, your questions. We do not push a standard package. A free site survey comes before any serious proposal, because shade, structure and consumption decide what is actually suitable.',
     localTitle: 'Office and reach',
     local:
-      'Our office is at Yadogopal Peth, Satara, Maharashtra. We take rooftop solar projects at any location — there is no service-area boundary. If you want to talk before filling a form, call or WhatsApp us.',
+      'Our office is at 7 Hills Apartment, 18, Shri Chhatrapati Shahu Maharaj Rd, Anand Nagar, Zunjar Colony, Satara, Maharashtra 415002. We take rooftop solar projects at any location — there is no service-area boundary. If you want to talk before filling a form, call or WhatsApp us.',
     ownerPlaceholderTitle: 'Leadership & team',
     ownerPlaceholder:
       'Founder details, team profiles and photographs can be added here when the business owner shares them. We have not invented names, years or awards.',
@@ -559,43 +581,39 @@ export const en: SiteContent = {
     eyebrow: 'Gallery',
     title: 'Projects',
     intro:
-      'Real DRJ Solutions installation photographs will be published here as they are documented. Until then, these are placeholder visuals — not claims of completed DRJ projects.',
+      'These photographs illustrate rooftop solar — they are not documented DRJ Solutions installations. Project photos from our work will replace them as they are available.',
     items: [
       {
         id: 'p1',
-        image: '/images/rooftop-india.jpg',
+        image: 'residential',
         propertyType: 'Residential rooftop',
-        location: 'Visual reference',
-        details: 'To be added',
-        description:
-          'Replace with a photographed DRJ residential installation, including location and system size if the customer agrees.',
+        location: 'Illustrative',
+        details: 'Home rooftop solar',
+        description: 'A residential roof carrying photovoltaic modules — the kind of installation we survey and plan for homes.',
       },
       {
         id: 'p2',
-        image: '/images/residential.jpg',
+        image: 'commercial',
         propertyType: 'Commercial rooftop',
-        location: 'Visual reference',
-        details: 'To be added',
-        description:
-          'Replace with a DRJ commercial or institutional rooftop once project documentation is available.',
+        location: 'Illustrative',
+        details: 'Business rooftop solar',
+        description: 'A commercial roof using available area for generation during working hours.',
       },
       {
         id: 'p3',
-        image: '/images/gallery-1.jpg',
+        image: 'install',
         propertyType: 'Installation work',
-        location: 'Visual reference',
-        details: 'To be added',
-        description:
-          'Replace with on-site installation photographs from a DRJ project team, with permission.',
+        location: 'Illustrative',
+        details: 'On-roof work',
+        description: 'Modules are placed, aligned and fixed on the roof structure after the survey and design are agreed.',
       },
       {
         id: 'p4',
-        image: '/images/gallery-3.jpg',
+        image: 'array',
         propertyType: 'Solar array',
-        location: 'Visual reference',
-        details: 'To be added',
-        description:
-          'Replace with a completed array photograph showing the actual roof type.',
+        location: 'Illustrative',
+        details: 'Array layout',
+        description: 'Rows of modules laid out for access, shade and electrical design — always site-specific.',
       },
     ],
   },
@@ -667,7 +685,7 @@ export const en: SiteContent = {
     eyebrow: 'Contact',
     title: 'Talk to DRJ Solutions',
     intro:
-      'Call, WhatsApp, or request a free site survey from any location. Our office is at Yadogopal Peth, Satara.',
+      'Call, WhatsApp, or request a free site survey from any location. Our office is at 7 Hills Apartment, Anand Nagar, Satara.',
     callTitle: 'Call us',
     callBody: 'Speak with us about your bill, roof or a site visit.',
     waTitle: 'WhatsApp',
@@ -707,5 +725,6 @@ export const en: SiteContent = {
     legal: 'Legal',
     privacy: 'Privacy Policy',
     terms: 'Terms & Conditions',
+    photoCredit: 'Photography used for illustration, licensed from Pexels and Unsplash.',
   },
 };

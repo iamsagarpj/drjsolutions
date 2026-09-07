@@ -1,4 +1,4 @@
-import { BUSINESS, formattedAddress, PHONE_E164, siteUrl } from '@/config/site';
+import { BUSINESS, formattedAddress, mapsSearchUrl, PHONE_E164, siteUrl } from '@/config/site';
 
 export function localBusinessJsonLd() {
   return {
@@ -13,8 +13,10 @@ export function localBusinessJsonLd() {
       streetAddress: `${BUSINESS.address.line1}, ${BUSINESS.address.line2}, ${BUSINESS.address.line3}`,
       addressLocality: BUSINESS.address.city,
       addressRegion: BUSINESS.address.state,
+      postalCode: BUSINESS.address.postalCode,
       addressCountry: 'IN',
     },
+    hasMap: mapsSearchUrl(),
     areaServed: BUSINESS.areaServed.map((name) => ({
       '@type': 'AdministrativeArea',
       name,
