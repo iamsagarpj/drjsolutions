@@ -760,12 +760,6 @@ export const en: SiteContent = {
         ],
       },
       {
-        title: 'Photographs',
-        body: [
-          'Some photographs on this website illustrate rooftop solar in general. They are not DRJ Solutions installations unless we say so. Photographs from our own work will be added as they are available.',
-        ],
-      },
-      {
         title: 'Your details',
         body: [
           'When you contact us, you confirm that the name, phone number and other details you share are accurate, and that we may use them to respond by call, WhatsApp or email.',
