@@ -6,13 +6,17 @@ export function SectionHeading({
   body,
   invert,
   align = 'left',
+  as = 'h2',
 }: {
   eyebrow?: string;
   title: string;
   body?: string;
   invert?: boolean;
   align?: 'left' | 'center';
+  as?: 'h1' | 'h2';
 }) {
+  const Heading = as;
+
   return (
     <div className={cn(align === 'center' && 'mx-auto max-w-3xl text-center')}>
       {eyebrow ? (
@@ -25,14 +29,14 @@ export function SectionHeading({
           {eyebrow}
         </p>
       ) : null}
-      <h2
+      <Heading
         className={cn(
           'text-[clamp(1.55rem,3.8vw,2.5rem)] font-bold leading-[1.15]',
           invert && 'text-white',
         )}
       >
         {title}
-      </h2>
+      </Heading>
       {body ? (
         <p
           className={cn(

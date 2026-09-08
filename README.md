@@ -8,14 +8,23 @@ Production-ready lead-generation website for **DRJ Solutions**, a rooftop solar 
 - About `/about`
 - Residential Solar `/residential-solar`
 - Commercial Solar `/commercial-solar`
+- Industrial Solar `/industrial-solar`
+- On-Grid Solar `/on-grid-solar`
+- Off-Grid Solar `/off-grid-solar`
+- Hybrid Solar `/hybrid-solar`
+- Solar Maintenance `/solar-maintenance`
+- Solar System Cost `/solar-system-cost`
 - Solar Subsidy `/solar-subsidy`
 - How It Works `/how-it-works`
 - Solar Savings Calculator `/solar-savings-calculator`
 - Projects `/projects`
+- Guides `/guides`
 - FAQ `/faq`
 - Contact `/contact`
 - Privacy Policy `/privacy-policy`
 - Terms `/terms`
+
+SEO implementation notes: `SEO-IMPLEMENTATION.md`.
 
 ## Run locally
 
@@ -45,7 +54,7 @@ Copy `.env.example` to `.env` and adjust:
 
 | Variable                                             | Purpose                                                                                                    |
 | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `VITE_SITE_URL`                                      | Canonical site URL for SEO, sitemap, Open Graph                                                            |
+| `VITE_SITE_URL`                                      | Canonical site URL for SEO, sitemap, Open Graph. Use `https://drjsolutions.in` |
 | `VITE_CONTACT_API_URL`                               | Optional extra POST endpoint. Empty = email enquiries to `drjsolutions5@gmail.com` |
 | `VITE_GA_MEASUREMENT_ID`                             | Optional Google Analytics ID (e.g. `G-XXXXXXXX`)                                                           |
 | `VITE_GOOGLE_MAPS_URL`                               | Optional Google Maps place URL                                                                             |
@@ -93,7 +102,7 @@ The site is a Vite SPA. `netlify.toml` sets the build, publish folder, Node 22, 
 
 | Variable                                              | Suggested value                                                                      |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| `VITE_SITE_URL`                                       | Your live URL, e.g. `https://www.drjsolutions.in` or `https://your-site.netlify.app` |
+| `VITE_SITE_URL`                                       | `https://drjsolutions.in` |
 | `VITE_CONTACT_API_URL`                                | Leave empty; enquiries go to **drjsolutions5@gmail.com**                        |
 | `VITE_GA_MEASUREMENT_ID`                              | Optional, e.g. `G-XXXXXXXX`                                                          |
 | `VITE_GOOGLE_MAPS_URL` / `VITE_GOOGLE_MAPS_EMBED_URL` | Optional                                                                             |

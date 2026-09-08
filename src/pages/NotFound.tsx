@@ -11,7 +11,7 @@ export function NotFoundPage() {
 
   return (
     <section className="sun-field py-16 sm:py-24">
-      <Seo copy={t.seo.notFound} path="/404" />
+      <Seo copy={t.seo.notFound} path={ROUTES.home} />
       <div className="wrap-narrow px-1 text-center">
         <p className="font-display text-sm font-semibold tracking-[0.2em] text-sun-deep">404</p>
         <h1 className="mt-3 text-[clamp(1.6rem,5vw,2.4rem)]">{t.notFound.title}</h1>

@@ -78,7 +78,7 @@ export function Navbar() {
                   />
                 </button>
                 {solutionsOpen ? (
-                  <div className="absolute left-0 top-full z-20 mt-1 min-w-52 rounded-xl border border-line bg-paper p-1.5 shadow-card">
+                  <div className="absolute left-0 top-full z-20 mt-1 max-h-[min(70vh,28rem)] min-w-56 overflow-y-auto rounded-xl border border-line bg-paper p-1.5 shadow-card">
                     {item.children.map((child) => (
                       <NavLink
                         key={child.to}

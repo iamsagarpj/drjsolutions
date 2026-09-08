@@ -15,7 +15,7 @@ export function PageHero({
       <div className="wrap py-8 sm:py-12 lg:py-14">
         <Breadcrumbs />
         <div className="mt-5">
-          <SectionHeading eyebrow={eyebrow} title={title} body={body} />
+          <SectionHeading as="h1" eyebrow={eyebrow} title={title} body={body} />
         </div>
       </div>
     </header>

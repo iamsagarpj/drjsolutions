@@ -33,9 +33,9 @@ export function Footer() {
         </div>
 
         <div>
-          <h2 className="font-display text-xs font-semibold uppercase tracking-[0.16em] text-sun-bright">
+          <p className="font-display text-xs font-semibold uppercase tracking-[0.16em] text-sun-bright">
             {t.footer.explore}
-          </h2>
+          </p>
           <ul className="mt-4 space-y-2 text-sm">
             {t.nav.map((item) =>
               item.children ? (
@@ -68,9 +68,9 @@ export function Footer() {
         </div>
 
         <div>
-          <h2 className="font-display text-xs font-semibold uppercase tracking-[0.16em] text-sun-bright">
+          <p className="font-display text-xs font-semibold uppercase tracking-[0.16em] text-sun-bright">
             {t.footer.contact}
-          </h2>
+          </p>
           <ul className="mt-4 space-y-3 text-sm text-white/75">
             <li>
               <a href={telUrl()} className="inline-flex items-center gap-2 hover:text-white">
@@ -115,9 +115,9 @@ export function Footer() {
         </div>
 
         <div>
-          <h2 className="font-display text-xs font-semibold uppercase tracking-[0.16em] text-sun-bright">
+          <p className="font-display text-xs font-semibold uppercase tracking-[0.16em] text-sun-bright">
             {t.footer.legal}
-          </h2>
+          </p>
           <ul className="mt-4 space-y-2 text-sm">
             <li>
               <Link to={ROUTES.privacy} className="text-white/75 hover:text-white">
@@ -135,7 +135,7 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10 py-5">
         <p className="wrap-wide text-xs text-white/45">
-          © {new Date().getFullYear()} {BUSINESS.name}. {BUSINESS.address.city}. {t.footer.photoCredit}
+          © {new Date().getFullYear()} {BUSINESS.name}. {BUSINESS.address.city}.
         </p>
       </div>
     </footer>

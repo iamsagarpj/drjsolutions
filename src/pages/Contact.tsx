@@ -15,7 +15,7 @@ import {
 } from '@/config/site';
 import { Phone, MessageCircle, MapPin, ExternalLink, Mail } from 'lucide-react';
 import { track } from '@/services/analytics';
-import { localBusinessJsonLd } from '@/lib/schema';
+import { breadcrumbJsonLd } from '@/lib/schema';
 
 export function ContactPage() {
   const { t } = useLanguage();
@@ -23,7 +23,14 @@ export function ContactPage() {
 
   return (
     <>
-      <Seo copy={t.seo.contact} path={ROUTES.contact} jsonLd={localBusinessJsonLd()} />
+      <Seo
+        copy={t.seo.contact}
+        path={ROUTES.contact}
+        jsonLd={breadcrumbJsonLd([
+          { name: t.common.homeLabel, path: '/' },
+          { name: t.contact.title, path: ROUTES.contact },
+        ])}
+      />
       <PageHero eyebrow={t.contact.eyebrow} title={t.contact.title} body={t.contact.intro} />
       <section className="section-y">
         <div className="wrap grid gap-6 md:grid-cols-2 xl:grid-cols-[0.9fr_1.1fr] xl:gap-8">

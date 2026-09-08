@@ -5,6 +5,8 @@ import { SystemExplainer } from '@/components/sections/SystemExplainer';
 import { SurveyPrep } from '@/components/sections/SurveyPrep';
 import { useLanguage } from '@/i18n/useLanguage';
 import { useLeadModal } from '@/components/lead/useLeadModal';
+import { RelatedLinks } from '@/components/layout/RelatedLinks';
+import { breadcrumbJsonLd, serviceJsonLd } from '@/lib/schema';
 import { ROUTES } from '@/config/site';
 import { Photo } from '@/components/ui/Photo';
 import { Check } from 'lucide-react';
@@ -16,7 +18,21 @@ export function ResidentialPage() {
 
   return (
     <>
-      <Seo copy={t.seo.residential} path={ROUTES.residential} />
+      <Seo
+        copy={t.seo.residential}
+        path={ROUTES.residential}
+        jsonLd={[
+          serviceJsonLd({
+            name: p.title,
+            description: t.seo.residential.description,
+            path: ROUTES.residential,
+          }),
+          breadcrumbJsonLd([
+            { name: t.common.homeLabel, path: '/' },
+            { name: p.title, path: ROUTES.residential },
+          ]),
+        ]}
+      />
       <PageHero eyebrow={p.eyebrow} title={p.title} body={p.intro} />
       <section className="section-y">
         <div className="wrap grid gap-8 lg:grid-cols-2 lg:gap-10">
@@ -72,6 +88,7 @@ export function ResidentialPage() {
           <Button className="mt-6 w-full sm:w-auto" onClick={() => openModal('residential')}>
             {t.cta.bookSurvey}
           </Button>
+          <RelatedLinks links={p.related} />
         </div>
       </section>
       <SystemExplainer />

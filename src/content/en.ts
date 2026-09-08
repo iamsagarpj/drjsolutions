@@ -1,4 +1,6 @@
 import { ROUTES } from '@/config/site';
+import { SEO_PAGES } from '@/config/seoMeta';
+import { enExtraPages } from '@/content/en-extra';
 import type { SiteContent } from '@/content/types';
 
 export const en: SiteContent = {
@@ -20,9 +22,16 @@ export const en: SiteContent = {
       children: [
         { to: ROUTES.residential, label: 'Residential Solar' },
         { to: ROUTES.commercial, label: 'Commercial Solar' },
+        { to: ROUTES.industrial, label: 'Industrial Solar' },
+        { to: ROUTES.onGrid, label: 'On-Grid Solar' },
+        { to: ROUTES.offGrid, label: 'Off-Grid Solar' },
+        { to: ROUTES.hybrid, label: 'Hybrid Solar' },
+        { to: ROUTES.maintenance, label: 'Solar Maintenance' },
+        { to: ROUTES.cost, label: 'Solar System Cost' },
       ],
     },
     { id: 'subsidy', to: ROUTES.subsidy, label: 'Subsidy' },
+    { id: 'guides', to: ROUTES.guides, label: 'Guides' },
     { id: 'how', to: ROUTES.howItWorks, label: 'How It Works' },
     { id: 'projects', to: ROUTES.projects, label: 'Projects' },
     { id: 'faq', to: ROUTES.faq, label: 'FAQ' },
@@ -62,11 +71,14 @@ export const en: SiteContent = {
     sending: 'Sending…',
     privacyNote: 'We use your details only to respond to this enquiry.',
     homeLabel: 'Home',
+    relatedTitle: 'Continue reading',
+    faqsTitle: 'Questions we are asked',
+    moreServices: 'More solar services and guides',
   },
   details: {
     serviceAreaTitle: 'Where we work',
     serviceAreaBody:
-      'DRJ Solutions is based at 7 Hills Apartment, Anand Nagar, Satara, Maharashtra. We take rooftop solar projects for homes, shops and businesses at any location — there is no service-area boundary. Book a free site survey from wherever you are, or call / WhatsApp to discuss your site.',
+      'DRJ Solutions is based at 7 Hills Apartment, Anand Nagar, Satara, Maharashtra. Satara city and Satara district are our home ground. We also take rooftop solar projects for homes, shops and businesses at other locations — there is no hard service-area boundary. Households in nearby towns such as Karad, Phaltan, Wai, Mahabaleshwar, Patan, Koregaon, Man, Khatav and Jaoli can enquire the same way; we schedule a survey around the site rather than publishing a separate page for every town. Book a free site survey, or call / WhatsApp to discuss your roof.',
     surveyPrepTitle: 'Keep these ready for a useful site survey',
     surveyPrep: [
       'A recent electricity bill (last one to three months if you have them)',
@@ -147,74 +159,42 @@ export const en: SiteContent = {
     another: 'Send another request',
   },
   seo: {
-    home: {
-      title: 'Rooftop Solar | DRJ Solutions',
-      description:
-        'DRJ Solutions provides rooftop solar solutions for homes and businesses at any location. Book a free site survey and understand how solar can reduce your electricity bills. Office in Satara, Maharashtra.',
+    home: { title: SEO_PAGES.home.title, description: SEO_PAGES.home.description },
+    about: { title: SEO_PAGES.about.title, description: SEO_PAGES.about.description },
+    residential: { title: SEO_PAGES.residential.title, description: SEO_PAGES.residential.description },
+    commercial: { title: SEO_PAGES.commercial.title, description: SEO_PAGES.commercial.description },
+    industrial: { title: SEO_PAGES.industrial.title, description: SEO_PAGES.industrial.description },
+    onGrid: { title: SEO_PAGES.onGrid.title, description: SEO_PAGES.onGrid.description },
+    offGrid: { title: SEO_PAGES.offGrid.title, description: SEO_PAGES.offGrid.description },
+    hybrid: { title: SEO_PAGES.hybrid.title, description: SEO_PAGES.hybrid.description },
+    maintenance: { title: SEO_PAGES.maintenance.title, description: SEO_PAGES.maintenance.description },
+    cost: { title: SEO_PAGES.cost.title, description: SEO_PAGES.cost.description },
+    subsidy: { title: SEO_PAGES.subsidy.title, description: SEO_PAGES.subsidy.description },
+    howItWorks: { title: SEO_PAGES.howItWorks.title, description: SEO_PAGES.howItWorks.description },
+    calculator: { title: SEO_PAGES.calculator.title, description: SEO_PAGES.calculator.description },
+    projects: { title: SEO_PAGES.projects.title, description: SEO_PAGES.projects.description },
+    faq: { title: SEO_PAGES.faq.title, description: SEO_PAGES.faq.description },
+    contact: { title: SEO_PAGES.contact.title, description: SEO_PAGES.contact.description },
+    guides: { title: SEO_PAGES.guides.title, description: SEO_PAGES.guides.description },
+    guideSatara: { title: SEO_PAGES.guideSatara.title, description: SEO_PAGES.guideSatara.description },
+    guideSystemTypes: {
+      title: SEO_PAGES.guideSystemTypes.title,
+      description: SEO_PAGES.guideSystemTypes.description,
     },
-    about: {
-      title: 'About DRJ Solutions | Rooftop Solar',
-      description:
-        'DRJ Solutions is a rooftop solar provider based in Satara, Maharashtra, taking projects at any location — site surveys, system planning and installation support.',
-    },
-    residential: {
-      title: 'Residential Rooftop Solar | DRJ Solutions',
-      description:
-        'Rooftop solar for homes, bungalows and independent houses. Understand suitability, process and book a free site survey.',
-    },
-    commercial: {
-      title: 'Commercial Solar | DRJ Solutions',
-      description:
-        'Rooftop solar for shops, offices, clinics, schools and commercial buildings. Discuss your requirement with DRJ Solutions.',
-    },
-    subsidy: {
-      title: 'Solar Subsidy | Guidance by DRJ Solutions',
-      description:
-        'Understand how rooftop solar subsidy generally works in India, what documents may be needed, and how DRJ Solutions can guide you through the process.',
-    },
-    howItWorks: {
-      title: 'How Rooftop Solar Installation Works | DRJ Solutions',
-      description:
-        'From consultation and bill analysis to free site survey, system design, installation and support — see how DRJ Solutions approaches rooftop solar.',
-    },
-    calculator: {
-      title: 'Solar Savings Calculator | DRJ Solutions',
-      description:
-        'Get an indicative estimate of rooftop solar system size, generation and potential savings. Actual results need a site assessment.',
-    },
-    projects: {
-      title: 'Solar Projects Gallery | DRJ Solutions',
-      description:
-        'A visual gallery of rooftop solar. Documented DRJ Solutions project photographs will be published as installations are recorded.',
-    },
-    faq: {
-      title: 'Rooftop Solar FAQ | DRJ Solutions',
-      description:
-        'Answers to common questions about rooftop solar, net metering, monsoon performance, maintenance, subsidy and system sizing.',
-    },
-    contact: {
-      title: 'Contact DRJ Solutions | Free Solar Site Survey',
-      description:
-        'Call 9579792080, WhatsApp DRJ Solutions, or request a free rooftop solar site survey from any location. Office: 7 Hills Apartment, Anand Nagar, Satara.',
-    },
-    privacy: {
-      title: 'Privacy Policy | DRJ Solutions',
-      description: 'How DRJ Solutions handles enquiry information submitted through this website.',
-    },
-    terms: {
-      title: 'Terms & Conditions | DRJ Solutions',
-      description: 'Website terms for using the DRJ Solutions rooftop solar website.',
-    },
+    guideSizing: { title: SEO_PAGES.guideSizing.title, description: SEO_PAGES.guideSizing.description },
+    privacy: { title: SEO_PAGES.privacy.title, description: SEO_PAGES.privacy.description },
+    terms: { title: SEO_PAGES.terms.title, description: SEO_PAGES.terms.description },
     notFound: {
       title: 'Page not found | DRJ Solutions',
       description: 'The page you requested is not available.',
+      robots: 'noindex, nofollow',
     },
   },
   home: {
-    heroEyebrow: 'Rooftop solar · Homes and businesses',
-    heroTitle: 'Take the power of the sun, and save thousands on electricity.',
+    heroEyebrow: 'Solar installation company · Satara, Maharashtra',
+    heroTitle: 'Rooftop solar for homes and businesses in Satara',
     heroBody:
-      'Switch to rooftop solar and take control of your electricity costs. DRJ Solutions takes rooftop projects at any location — there is no service-area boundary.',
+      'DRJ Solutions plans and installs rooftop solar from our office in Anand Nagar, Satara. We work on residential, commercial and industrial roofs — on-grid, hybrid or off-grid where the site needs it — and help you understand subsidy paperwork without treating unofficial numbers as promises. Book a free site survey to see what your roof can do.',
     trust: [
       { title: 'Rooftop Solar Solutions', text: 'For homes and businesses' },
       { title: 'Free Site Survey', text: 'Understand what your roof can do' },
@@ -307,9 +287,9 @@ export const en: SiteContent = {
         text: 'Our office is at 7 Hills Apartment, Anand Nagar, Satara. We take projects anywhere — there is no service-area limit — and stay available for surveys, advice and support.',
       },
     ],
-    solutionsTitle: 'Solar for homes and businesses',
+    solutionsTitle: 'Solar for homes, shops and industry',
     solutionsBody:
-      'Whether you run a household, shop, clinic or office, rooftop solar can be planned around your actual electricity use.',
+      'Whether you run a household in Satara, a shop, a clinic or a workshop, rooftop solar is planned around your bill, your roof and the type of connection you have.',
     residentialCard: {
       title: 'Residential solar',
       text: 'Independent houses, bungalows and villas. Sized around your bill, roof and family usage.',
@@ -356,12 +336,20 @@ export const en: SiteContent = {
         text: 'With net metering where available, surplus daytime generation can be accounted against your grid consumption.',
       },
     ],
+    moreLinks: [
+      { to: ROUTES.industrial, label: 'Industrial solar for workshops and warehouses' },
+      { to: ROUTES.onGrid, label: 'On-grid solar systems' },
+      { to: ROUTES.hybrid, label: 'Hybrid solar with backup' },
+      { to: ROUTES.maintenance, label: 'Solar maintenance and support' },
+      { to: ROUTES.cost, label: 'Solar system cost in Satara' },
+      { to: ROUTES.guides, label: 'Satara solar guides' },
+    ],
   },
   about: {
     eyebrow: 'About us',
     title: 'A solar partner for homes and businesses',
     intro:
-      'DRJ Solutions provides rooftop solar solutions for homes and businesses at any location. We help customers understand solar clearly, plan a system that fits the property, and move from enquiry to installation with practical support.',
+      'DRJ Solutions is a rooftop solar company based in Satara, Maharashtra. We help homeowners and businesses understand solar clearly, plan a system that fits the property, and move from enquiry to installation with practical support.',
     missionTitle: 'Our mission',
     mission:
       'To make rooftop solar understandable and accessible for families and businesses — so sunlight on your roof becomes reliable, useful electricity.',
@@ -393,7 +381,7 @@ export const en: SiteContent = {
     eyebrow: 'Residential solar',
     title: 'Rooftop solar for homes',
     intro:
-      'If you own an independent house, bungalow or villa, your roof can generate electricity for daily use. DRJ Solutions helps homeowners understand whether solar is suitable — and what size of system makes sense.',
+      'If you own an independent house, bungalow or villa in Satara or elsewhere, your roof can generate electricity for daily use. DRJ Solutions helps homeowners understand whether solar is suitable — and what size of system makes sense.',
     whatTitle: 'What is rooftop solar?',
     what: 'Rooftop solar places photovoltaic panels on your terrace or sloping roof. The panels convert sunlight into electricity that your home can use during the day. Where net metering is available, surplus units may be accounted against grid consumption as per the local electricity rules.',
     whoTitle: 'Who is it suitable for?',
@@ -447,12 +435,18 @@ export const en: SiteContent = {
     ],
     processNote:
       'A free site survey is the correct next step. Photographs and a recent electricity bill help us prepare, but the roof still needs to be seen.',
+    related: [
+      { to: ROUTES.onGrid, label: 'On-grid solar for grid-connected homes' },
+      { to: ROUTES.subsidy, label: 'Residential subsidy guidance in Maharashtra' },
+      { to: ROUTES.cost, label: 'What affects home solar cost' },
+      { to: ROUTES.guideSatara, label: 'Practical rooftop solar guide for Satara' },
+    ],
   },
   commercial: {
     eyebrow: 'Commercial solar',
     title: 'Solar for shops, offices and businesses',
     intro:
-      'If your business pays a substantial electricity bill, rooftop solar can be part of a longer energy plan. DRJ Solutions works with shops, offices, clinics, schools and commercial buildings at any location.',
+      'If your business in Satara or elsewhere pays a substantial electricity bill, rooftop solar can be part of a longer energy plan. DRJ Solutions works with shops, offices, clinics, schools and commercial buildings.',
     whoTitle: 'Who we typically speak with',
     who: [
       'Retail shops and showrooms',
@@ -482,6 +476,12 @@ export const en: SiteContent = {
       },
     ],
     note: 'We do not quote a guaranteed percentage saving without assessing your load, tariff category and roof. A discussion and site survey come first.',
+    related: [
+      { to: ROUTES.industrial, label: 'Industrial solar for factories and warehouses' },
+      { to: ROUTES.onGrid, label: 'On-grid solar during business hours' },
+      { to: ROUTES.cost, label: 'Commercial solar cost factors' },
+      { to: ROUTES.contact, label: 'Discuss a commercial site survey' },
+    ],
   },
   subsidy: {
     eyebrow: 'Solar subsidy',
@@ -512,6 +512,10 @@ export const en: SiteContent = {
         text: 'Do not rely on old flyers, social media forwards or a neighbour’s amount from two years ago. Official sources such as the PM Surya Ghar portal and MNRE publish the rules that actually apply.',
       },
       {
+        title: 'PM Surya Ghar: Muft Bijli Yojana',
+        text: 'This is the current central residential rooftop programme many Maharashtra homeowners ask about. Applications, vendor rules, capacity caps and disbursement follow the official portal — not a flyer. DRJ Solutions can walk you through the steps that apply today. We will not type an unofficial slab amount onto this page.',
+      },
+      {
         title: 'How DRJ Solutions can assist',
         text: 'We help you understand the current process in plain language, prepare for documentation, and align the system design with what the site and the scheme allow. We will not invent a subsidy figure to close a conversation.',
       },
@@ -519,6 +523,12 @@ export const en: SiteContent = {
     helpTitle: 'Want help understanding your solar subsidy eligibility?',
     helpBody:
       'Bring a recent electricity bill and a few roof photographs if you have them. We will walk through the current process and the next practical step.',
+    related: [
+      { to: ROUTES.residential, label: 'Home rooftop solar in Satara' },
+      { to: ROUTES.cost, label: 'Cost factors before subsidy' },
+      { to: ROUTES.guideSatara, label: 'Satara rooftop solar guide' },
+      { to: ROUTES.contact, label: 'Talk through your subsidy questions' },
+    ],
   },
   howItWorks: {
     eyebrow: 'Process',
@@ -550,6 +560,12 @@ export const en: SiteContent = {
         title: 'After-sales / maintenance support',
         text: 'You get guidance on cleaning, monitoring and support so the system remains useful for the long term.',
       },
+    ],
+    related: [
+      { to: ROUTES.onGrid, label: 'On-grid installation behaviour' },
+      { to: ROUTES.maintenance, label: 'Maintenance after commissioning' },
+      { to: ROUTES.contact, label: 'Book a free site survey' },
+      { to: ROUTES.guideSatara, label: 'What a Satara survey looks at' },
     ],
   },
   calculator: {
@@ -704,15 +720,82 @@ export const en: SiteContent = {
       'This website is operated by DRJ Solutions, Satara. When you submit an enquiry form, we collect the information you enter — typically your name, phone number, city, optional electricity bill amount, property type and message.',
       'We use this information only to respond to your rooftop solar enquiry. Submissions are emailed to DRJ Solutions at {email}. We do not sell your details.',
       'You can ask us to update or remove enquiry details by calling 9579792080 or emailing {email}.',
-      'This page is a working privacy notice and can be reviewed by the business owner or a legal advisor before wider public launch.',
     ],
     termsTitle: 'Terms & Conditions',
-    termsBody: [
-      'This website provides information about rooftop solar solutions offered by DRJ Solutions. Content is educational and promotional. It is not a contract, quotation, or guarantee of savings, subsidy or installation timelines.',
-      'Calculator results are indicative estimates. Actual system size, generation and savings depend on site conditions, tariff, consumption, equipment and regulations.',
-      'Subsidy information is general guidance. Government rules change. Verify current eligibility on official portals.',
-      'Images in the projects gallery may be placeholders until real project photographs are provided. Placeholder images are not DRJ installations.',
-      'By contacting us you confirm that the phone number you share can be used to respond to your enquiry.',
+    termsIntro:
+      'These terms apply when you use this website or contact DRJ Solutions about rooftop solar. DRJ Solutions is a rooftop solar business operating from Satara, Maharashtra.',
+    termsSections: [
+      {
+        title: 'Who we are',
+        body: [
+          'DRJ Solutions provides rooftop solar solutions for homes and businesses. You can reach us on 9579792080, WhatsApp, or {email}.',
+          'Our office is at 7 Hills Apartment, 18, Shri Chhatrapati Shahu Maharaj Rd, Anand Nagar, Zunjar Colony, Satara, Maharashtra 415002. We take rooftop solar projects at any location.',
+        ],
+      },
+      {
+        title: 'Using this website',
+        body: [
+          'This website is the official online presence of DRJ Solutions. Use it to understand our rooftop solar work, check an indicative savings estimate, book a free site survey, and get in touch.',
+          'By using the site or sending an enquiry, you agree to these terms.',
+        ],
+      },
+      {
+        title: 'Enquiries, site surveys and paid work',
+        body: [
+          'A form, phone call or WhatsApp message is a request to talk. It does not by itself create a paid contract.',
+          'A free site survey helps us understand your roof, shading and electricity use. Supply, installation or any paid work goes ahead only after we share a proposal and you accept it — in writing, including email or WhatsApp where we agree to work that way.',
+        ],
+      },
+      {
+        title: 'Estimates and the savings calculator',
+        body: [
+          'Figures on this website, including calculator results, are indicative. Actual system size, generation, savings and payback depend on your tariff, consumption, rooftop conditions, shading, equipment, net metering and applicable rules.',
+          'We confirm numbers in a proposal after assessing the site.',
+        ],
+      },
+      {
+        title: 'Subsidy and net metering',
+        body: [
+          'Subsidy and net metering depend on current government and electricity-distribution rules, your eligibility, and approvals that are outside our control. We can guide you through the process. We do not guarantee that any scheme, amount or timeline will apply to your project.',
+        ],
+      },
+      {
+        title: 'Photographs',
+        body: [
+          'Some photographs on this website illustrate rooftop solar in general. They are not DRJ Solutions installations unless we say so. Photographs from our own work will be added as they are available.',
+        ],
+      },
+      {
+        title: 'Your details',
+        body: [
+          'When you contact us, you confirm that the name, phone number and other details you share are accurate, and that we may use them to respond by call, WhatsApp or email.',
+        ],
+      },
+      {
+        title: 'Website content',
+        body: [
+          'Text, branding and layout on this website belong to DRJ Solutions unless credited otherwise. Do not copy the site for a competing service without our permission.',
+        ],
+      },
+      {
+        title: 'Responsibility',
+        body: [
+          'We keep this website useful and update pages from time to time. DRJ Solutions is not responsible for decisions made only on website estimates or general guidance, or for delays caused by government portals, the electricity distribution company, or site conditions we could not reasonably know before a survey.',
+          'Our responsibility for paid work is as set out in the proposal or agreement you accept.',
+        ],
+      },
+      {
+        title: 'Governing law',
+        body: [
+          'These terms are governed by the laws of India. Disputes are subject to the courts at Satara, Maharashtra.',
+        ],
+      },
+      {
+        title: 'Changes and contact',
+        body: [
+          'We may update these terms on this page. For questions, call 9579792080 or email {email}.',
+        ],
+      },
     ],
   },
   notFound: {
@@ -725,6 +808,6 @@ export const en: SiteContent = {
     legal: 'Legal',
     privacy: 'Privacy Policy',
     terms: 'Terms & Conditions',
-    photoCredit: 'Photography used for illustration, licensed from Pexels and Unsplash.',
   },
+  ...enExtraPages,
 };

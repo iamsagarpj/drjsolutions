@@ -1,3 +1,5 @@
+import { CANONICAL_ORIGIN } from '@/config/seoMeta';
+
 export const PHONE_LOCAL = '9579792080';
 export const PHONE_E164 = '+919579792080';
 export const PHONE_DISPLAY = '95797 92080';
@@ -20,7 +22,7 @@ export const BUSINESS = {
     postalCode: '415002',
     country: 'India',
   },
-  areaServed: ['India'],
+  areaServed: ['Satara', 'Satara District', 'Maharashtra', 'India'],
 } as const;
 
 /** Exact query Google Maps should open for the office. */
@@ -47,7 +49,7 @@ export function mapsEmbedUrl(): string {
 }
 
 export function siteUrl(): string {
-  return (import.meta.env.VITE_SITE_URL || 'https://www.drjsolutions.in').replace(/\/$/, '');
+  return (import.meta.env.VITE_SITE_URL || CANONICAL_ORIGIN).replace(/\/$/, '');
 }
 
 export const DEFAULT_WHATSAPP_MESSAGE =
@@ -70,12 +72,22 @@ export const ROUTES = {
   about: '/about',
   residential: '/residential-solar',
   commercial: '/commercial-solar',
+  industrial: '/industrial-solar',
+  onGrid: '/on-grid-solar',
+  offGrid: '/off-grid-solar',
+  hybrid: '/hybrid-solar',
+  maintenance: '/solar-maintenance',
+  cost: '/solar-system-cost',
   subsidy: '/solar-subsidy',
   howItWorks: '/how-it-works',
   calculator: '/solar-savings-calculator',
   projects: '/projects',
   faq: '/faq',
   contact: '/contact',
+  guides: '/guides',
+  guideSatara: '/guides/rooftop-solar-satara',
+  guideSystemTypes: '/guides/on-grid-vs-off-grid-vs-hybrid',
+  guideSizing: '/guides/solar-system-size',
   privacy: '/privacy-policy',
   terms: '/terms',
 } as const;

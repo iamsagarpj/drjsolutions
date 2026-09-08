@@ -1,0 +1,115 @@
+{
+  "home": {
+    "path": "/",
+    "title": "Solar Company in Satara, Maharashtra | DRJ Solutions",
+    "description": "DRJ Solutions installs rooftop solar for homes and businesses from our office in Satara, Maharashtra. Book a free site survey to size a system for your roof and electricity bill."
+  },
+  "about": {
+    "path": "/about",
+    "title": "About DRJ Solutions | Solar Installer in Satara",
+    "description": "Meet DRJ Solutions, a rooftop solar company based at 7 Hills Apartment, Anand Nagar, Satara. We plan, install and support solar systems for homes and businesses."
+  },
+  "residential": {
+    "path": "/residential-solar",
+    "title": "Residential Solar Installation in Satara | DRJ Solutions",
+    "description": "Rooftop solar for independent houses, bungalows and villas in Satara and beyond. Learn what affects system size, then book a free home site survey."
+  },
+  "commercial": {
+    "path": "/commercial-solar",
+    "title": "Commercial Solar Solutions in Satara | DRJ Solutions",
+    "description": "Rooftop solar for shops, offices, clinics and schools. DRJ Solutions helps Satara businesses plan daytime generation around real electricity use."
+  },
+  "industrial": {
+    "path": "/industrial-solar",
+    "title": "Industrial Solar Solutions in Maharashtra | DRJ Solutions",
+    "description": "Solar for workshops, warehouses and industrial roofs in Maharashtra. We survey structure, load and tariff before proposing a system — not a generic package."
+  },
+  "onGrid": {
+    "path": "/on-grid-solar",
+    "title": "On-Grid Solar Systems in Satara | DRJ Solutions",
+    "description": "On-grid rooftop solar uses sunlight during the day and the grid at night. DRJ Solutions explains net metering, power cuts and whether this setup fits your Satara property."
+  },
+  "offGrid": {
+    "path": "/off-grid-solar",
+    "title": "Off-Grid Solar Systems in Satara | DRJ Solutions",
+    "description": "Off-grid solar with battery storage is for sites that cannot rely on the grid. See when it is appropriate and what a survey needs to check."
+  },
+  "hybrid": {
+    "path": "/hybrid-solar",
+    "title": "Hybrid Solar Systems in Satara | DRJ Solutions",
+    "description": "Hybrid solar combines grid connection with battery backup. Understand when it helps during power cuts and how it differs from a standard on-grid system."
+  },
+  "maintenance": {
+    "path": "/solar-maintenance",
+    "title": "Solar Maintenance and Support in Satara | DRJ Solutions",
+    "description": "How to keep a rooftop solar system working: cleaning, monsoon care, inverter checks and when to call DRJ Solutions in Satara for support."
+  },
+  "cost": {
+    "path": "/solar-system-cost",
+    "title": "Solar System Cost in Satara | DRJ Solutions",
+    "description": "What actually drives rooftop solar cost in Satara and Maharashtra — system size, roof, equipment and paperwork. Use our calculator, then request a survey for a real proposal."
+  },
+  "subsidy": {
+    "path": "/solar-subsidy",
+    "title": "Solar Subsidy Guide for Maharashtra | DRJ Solutions",
+    "description": "How residential rooftop solar subsidy generally works in Maharashtra, including PM Surya Ghar. DRJ Solutions helps you follow current official rules — we do not invent amounts."
+  },
+  "howItWorks": {
+    "path": "/how-it-works",
+    "title": "Solar Installation Process in Satara | DRJ Solutions",
+    "description": "From the first call to commissioning: consultation, bill review, free site survey, design, installation and support with DRJ Solutions in Satara."
+  },
+  "calculator": {
+    "path": "/solar-savings-calculator",
+    "title": "Solar Savings Calculator | DRJ Solutions, Satara",
+    "description": "Get an indicative rooftop solar size, generation and savings range from your monthly bill. Figures are planning estimates until DRJ Solutions surveys your roof."
+  },
+  "projects": {
+    "path": "/projects",
+    "title": "Solar Projects | DRJ Solutions, Satara",
+    "description": "A visual look at rooftop solar. Documented DRJ Solutions installation photographs will be published here as they are recorded — we do not present stock photos as our work."
+  },
+  "faq": {
+    "path": "/faq",
+    "title": "Rooftop Solar FAQ | DRJ Solutions, Satara",
+    "description": "Clear answers on rooftop solar bills, monsoon, net metering, maintenance, subsidy and system size from DRJ Solutions in Satara, Maharashtra."
+  },
+  "contact": {
+    "path": "/contact",
+    "title": "Contact DRJ Solutions in Satara | Free Site Survey",
+    "description": "Call 95797 92080, WhatsApp, or request a free rooftop solar site survey. Office: 7 Hills Apartment, Anand Nagar, Satara, Maharashtra 415002."
+  },
+  "guides": {
+    "path": "/guides",
+    "title": "Solar Guides | DRJ Solutions, Satara",
+    "description": "Practical rooftop solar guides from DRJ Solutions: Satara installation, system types, and how to think about system size — written for homeowners and businesses."
+  },
+  "guideSatara": {
+    "path": "/guides/rooftop-solar-satara",
+    "title": "Rooftop Solar in Satara: A Practical Guide | DRJ Solutions",
+    "ogType": "article",
+    "description": "How rooftop solar works for homes and businesses in Satara: roofs, monsoon, electricity connection, subsidy process and how a local installer surveys the site."
+  },
+  "guideSystemTypes": {
+    "path": "/guides/on-grid-vs-off-grid-vs-hybrid",
+    "title": "On-Grid vs Off-Grid vs Hybrid Solar | DRJ Solutions",
+    "ogType": "article",
+    "description": "A plain-language comparison of on-grid, off-grid and hybrid rooftop solar — including power cuts, batteries, net metering and which questions to ask before you buy."
+  },
+  "guideSizing": {
+    "path": "/guides/solar-system-size",
+    "title": "How to Size a Solar System for Your Home | DRJ Solutions",
+    "ogType": "article",
+    "description": "How monthly units, roof area and sanctioned load shape solar system size. Includes planning examples using DRJ Solutions’ published calculator assumptions."
+  },
+  "privacy": {
+    "path": "/privacy-policy",
+    "title": "Privacy Policy | DRJ Solutions",
+    "description": "How DRJ Solutions in Satara handles enquiry information submitted through this website."
+  },
+  "terms": {
+    "path": "/terms",
+    "title": "Terms & Conditions | DRJ Solutions",
+    "description": "Terms for using the DRJ Solutions website and enquiring about rooftop solar from our Satara, Maharashtra office."
+  }
+}

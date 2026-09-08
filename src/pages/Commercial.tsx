@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/Button';
 import { SurveyPrep } from '@/components/sections/SurveyPrep';
 import { useLanguage } from '@/i18n/useLanguage';
 import { useLeadModal } from '@/components/lead/useLeadModal';
+import { RelatedLinks } from '@/components/layout/RelatedLinks';
+import { breadcrumbJsonLd, serviceJsonLd } from '@/lib/schema';
 import { ROUTES } from '@/config/site';
 import { Photo } from '@/components/ui/Photo';
 import { Check } from 'lucide-react';
@@ -15,7 +17,21 @@ export function CommercialPage() {
 
   return (
     <>
-      <Seo copy={t.seo.commercial} path={ROUTES.commercial} />
+      <Seo
+        copy={t.seo.commercial}
+        path={ROUTES.commercial}
+        jsonLd={[
+          serviceJsonLd({
+            name: p.title,
+            description: t.seo.commercial.description,
+            path: ROUTES.commercial,
+          }),
+          breadcrumbJsonLd([
+            { name: t.common.homeLabel, path: '/' },
+            { name: p.title, path: ROUTES.commercial },
+          ]),
+        ]}
+      />
       <PageHero eyebrow={p.eyebrow} title={p.title} body={p.intro} />
       <section className="section-y">
         <div className="wrap grid gap-8 lg:grid-cols-2 lg:gap-10">
@@ -39,6 +55,7 @@ export function CommercialPage() {
             <Button className="mt-6 w-full sm:w-auto" onClick={() => openModal('commercial')}>
               {t.cta.discussCommercial}
             </Button>
+            <RelatedLinks links={p.related} />
           </div>
         </div>
         <div className="wrap mt-10 grid gap-4 sm:grid-cols-2">

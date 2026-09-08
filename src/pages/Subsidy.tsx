@@ -3,6 +3,8 @@ import { Seo } from '@/components/layout/Seo';
 import { Button } from '@/components/ui/Button';
 import { useLanguage } from '@/i18n/useLanguage';
 import { useLeadModal } from '@/components/lead/useLeadModal';
+import { RelatedLinks } from '@/components/layout/RelatedLinks';
+import { breadcrumbJsonLd } from '@/lib/schema';
 import { ROUTES } from '@/config/site';
 import { SUBSIDY_CONFIG } from '@/config/calculator';
 import { track } from '@/services/analytics';
@@ -14,7 +16,14 @@ export function SubsidyPage() {
 
   return (
     <>
-      <Seo copy={t.seo.subsidy} path={ROUTES.subsidy} />
+      <Seo
+        copy={t.seo.subsidy}
+        path={ROUTES.subsidy}
+        jsonLd={breadcrumbJsonLd([
+          { name: t.common.homeLabel, path: '/' },
+          { name: p.title, path: ROUTES.subsidy },
+        ])}
+      />
       <PageHero eyebrow={p.eyebrow} title={p.title} body={p.intro} />
       <section className="section-y">
         <div className="wrap">
@@ -43,14 +52,11 @@ export function SubsidyPage() {
             </div>
           ) : (
             <div className="mt-8 rounded-2xl border border-dashed border-line-strong bg-sky p-6">
-              <h2 className="text-xl">Subsidy figures</h2>
+              <h2 className="text-xl">Subsidy amounts</h2>
               <p className="mt-2 text-sm text-muted">
-                Amounts are not listed here until they are verified from an official source and
-                entered in
-                <code className="mx-1 rounded bg-paper px-1.5 py-0.5 text-xs">
-                  src/config/calculator.ts
-                </code>
-                (`SUBSIDY_CONFIG.amounts`).
+                We list rupee amounts on this page only after they are checked against the official
+                government portal. Until then, use the links below and ask DRJ Solutions to walk
+                through the current process for your bill.
               </p>
             </div>
           )}
@@ -81,6 +87,7 @@ export function SubsidyPage() {
               {t.cta.talkToDrj}
             </Button>
           </div>
+          <RelatedLinks links={p.related} />
         </div>
       </section>
     </>

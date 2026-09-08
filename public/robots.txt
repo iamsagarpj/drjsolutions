@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.drjsolutions.in/sitemap.xml
+Disallow: /404.html
+
+Sitemap: https://drjsolutions.in/sitemap.xml

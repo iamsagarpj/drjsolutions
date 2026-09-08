@@ -4,7 +4,7 @@
  * Unsplash: copy the photo-… id from the image URL.
  * Pexels: copy the numeric id from the photo page.
  */
-export const PHOTO_WIDTHS = [640, 960, 1280, 1920, 2560] as const;
+export const PHOTO_WIDTHS = [640, 960, 1280, 1920] as const;
 
 export type PhotoId = 'hero' | 'residential' | 'commercial' | 'install' | 'array' | 'sky';
 
@@ -16,7 +16,7 @@ export const PHOTOS: Record<PhotoId, PhotoAsset> = {
   hero: {
     kind: 'unsplash',
     unsplash: 'photo-1730807908064-c087959dd52c',
-    alt: 'Homes with rooftop solar beside a green lawn',
+    alt: 'Independent house with rooftop solar panels in daylight',
   },
   residential: {
     kind: 'pexels',

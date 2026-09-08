@@ -12,6 +12,37 @@ export type NavItem = {
 export type SeoCopy = {
   title: string;
   description: string;
+  robots?: string;
+};
+
+export type RelatedLink = {
+  to: string;
+  label: string;
+};
+
+export type ServicePageCopy = {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  whoTitle: string;
+  who: string[];
+  benefitsTitle: string;
+  benefits: Array<{ title: string; text: string }>;
+  considerTitle: string;
+  consider: Array<{ title: string; text: string }>;
+  processNote: string;
+  faqs: Array<{ q: string; a: string }>;
+  related: RelatedLink[];
+  photoAlt: string;
+};
+
+export type GuidePageCopy = {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  sections: Array<{ title: string; paragraphs: string[] }>;
+  faqs: Array<{ q: string; a: string }>;
+  related: RelatedLink[];
 };
 
 export type SiteContent = {
@@ -57,6 +88,9 @@ export type SiteContent = {
     sending: string;
     privacyNote: string;
     homeLabel: string;
+    relatedTitle: string;
+    faqsTitle: string;
+    moreServices: string;
   };
   details: {
     serviceAreaTitle: string;
@@ -123,6 +157,7 @@ export type SiteContent = {
     finalTitle: string;
     finalBody: string;
     energyPath: Array<{ label: string; title: string; text: string }>;
+    moreLinks: RelatedLink[];
   };
   about: {
     eyebrow: string;
@@ -151,6 +186,7 @@ export type SiteContent = {
     factorsTitle: string;
     factors: Array<{ title: string; text: string }>;
     processNote: string;
+    related: RelatedLink[];
   };
   commercial: {
     eyebrow: string;
@@ -161,6 +197,7 @@ export type SiteContent = {
     benefitsTitle: string;
     benefits: Array<{ title: string; text: string }>;
     note: string;
+    related: RelatedLink[];
   };
   subsidy: {
     eyebrow: string;
@@ -170,12 +207,14 @@ export type SiteContent = {
     sections: Array<{ title: string; text: string }>;
     helpTitle: string;
     helpBody: string;
+    related: RelatedLink[];
   };
   howItWorks: {
     eyebrow: string;
     title: string;
     intro: string;
     steps: Array<{ title: string; text: string }>;
+    related: RelatedLink[];
   };
   calculator: {
     eyebrow: string;
@@ -215,6 +254,21 @@ export type SiteContent = {
     intro: string;
     items: Array<{ q: string; a: string }>;
   };
+  industrial: ServicePageCopy;
+  onGrid: ServicePageCopy;
+  offGrid: ServicePageCopy;
+  hybrid: ServicePageCopy;
+  maintenance: ServicePageCopy;
+  cost: ServicePageCopy;
+  guidesHub: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    items: Array<{ to: string; title: string; text: string }>;
+  };
+  guideSatara: GuidePageCopy;
+  guideSystemTypes: GuidePageCopy;
+  guideSizing: GuidePageCopy;
   contact: {
     eyebrow: string;
     title: string;
@@ -234,7 +288,8 @@ export type SiteContent = {
     privacyTitle: string;
     privacyBody: string[];
     termsTitle: string;
-    termsBody: string[];
+    termsIntro: string;
+    termsSections: Array<{ title: string; body: string[] }>;
   };
   notFound: {
     title: string;
@@ -246,6 +301,5 @@ export type SiteContent = {
     legal: string;
     privacy: string;
     terms: string;
-    photoCredit: string;
   };
 };

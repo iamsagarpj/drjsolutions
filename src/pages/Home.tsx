@@ -15,7 +15,7 @@ import { SurveyPrep } from '@/components/sections/SurveyPrep';
 import { SavingsCalculator } from '@/components/calculator/SavingsCalculator';
 import { Container } from '@/components/ui/Container';
 import { useLanguage } from '@/i18n/useLanguage';
-import { localBusinessJsonLd } from '@/lib/schema';
+import { localBusinessJsonLd, websiteJsonLd } from '@/lib/schema';
 import { ROUTES } from '@/config/site';
 import { Link } from 'react-router-dom';
 import { MessageCircle } from 'lucide-react';
@@ -25,7 +25,7 @@ export function HomePage() {
 
   return (
     <>
-      <Seo copy={t.seo.home} path={ROUTES.home} jsonLd={localBusinessJsonLd()} />
+      <Seo copy={t.seo.home} path={ROUTES.home} jsonLd={[localBusinessJsonLd(), websiteJsonLd()]} />
       <Hero />
       <ServiceArea />
       <ProblemSolution />
@@ -33,6 +33,23 @@ export function HomePage() {
       <SystemExplainer />
       <Advantages />
       <SolutionsPreview />
+      <section className="pb-4">
+        <div className="wrap">
+          <h2 className="text-lg sm:text-xl">{t.common.moreServices}</h2>
+          <ul className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            {t.home.moreLinks.map((link) => (
+              <li key={link.to}>
+                <Link
+                  to={link.to}
+                  className="text-sm font-semibold text-navy underline-offset-4 hover:underline"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
       <ProcessTimeline />
       <SurveyPrep />
       <section className="section-y">

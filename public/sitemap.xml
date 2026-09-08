@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.drjsolutions.in/</loc></url>
-  <url><loc>https://www.drjsolutions.in/about</loc></url>
-  <url><loc>https://www.drjsolutions.in/residential-solar</loc></url>
-  <url><loc>https://www.drjsolutions.in/commercial-solar</loc></url>
-  <url><loc>https://www.drjsolutions.in/solar-subsidy</loc></url>
-  <url><loc>https://www.drjsolutions.in/how-it-works</loc></url>
-  <url><loc>https://www.drjsolutions.in/solar-savings-calculator</loc></url>
-  <url><loc>https://www.drjsolutions.in/projects</loc></url>
-  <url><loc>https://www.drjsolutions.in/faq</loc></url>
-  <url><loc>https://www.drjsolutions.in/contact</loc></url>
-  <url><loc>https://www.drjsolutions.in/privacy-policy</loc></url>
-  <url><loc>https://www.drjsolutions.in/terms</loc></url>
+  <url><loc>https://drjsolutions.in/</loc></url>
+  <url><loc>https://drjsolutions.in/about</loc></url>
+  <url><loc>https://drjsolutions.in/residential-solar</loc></url>
+  <url><loc>https://drjsolutions.in/commercial-solar</loc></url>
+  <url><loc>https://drjsolutions.in/industrial-solar</loc></url>
+  <url><loc>https://drjsolutions.in/on-grid-solar</loc></url>
+  <url><loc>https://drjsolutions.in/off-grid-solar</loc></url>
+  <url><loc>https://drjsolutions.in/hybrid-solar</loc></url>
+  <url><loc>https://drjsolutions.in/solar-maintenance</loc></url>
+  <url><loc>https://drjsolutions.in/solar-system-cost</loc></url>
+  <url><loc>https://drjsolutions.in/solar-subsidy</loc></url>
+  <url><loc>https://drjsolutions.in/how-it-works</loc></url>
+  <url><loc>https://drjsolutions.in/solar-savings-calculator</loc></url>
+  <url><loc>https://drjsolutions.in/projects</loc></url>
+  <url><loc>https://drjsolutions.in/faq</loc></url>
+  <url><loc>https://drjsolutions.in/contact</loc></url>
+  <url><loc>https://drjsolutions.in/guides</loc></url>
+  <url><loc>https://drjsolutions.in/guides/rooftop-solar-satara</loc></url>
+  <url><loc>https://drjsolutions.in/guides/on-grid-vs-off-grid-vs-hybrid</loc></url>
+  <url><loc>https://drjsolutions.in/guides/solar-system-size</loc></url>
+  <url><loc>https://drjsolutions.in/privacy-policy</loc></url>
+  <url><loc>https://drjsolutions.in/terms</loc></url>
 </urlset>

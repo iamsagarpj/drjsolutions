@@ -5,11 +5,18 @@
 [build.environment]
   NODE_VERSION = "22"
 
-# SPA fallback for client routes. Static files such as /__forms.html are served first.
+# Prefer the non-www canonical host.
+[[redirects]]
+  from = "https://www.drjsolutions.in/*"
+  to = "https://drjsolutions.in/:splat"
+  status = 301
+  force = true
+
+# Prerendered route folders are served first. Unknown paths return 404.html.
 [[redirects]]
   from = "/*"
-  to = "/index.html"
-  status = 200
+  to = "/404.html"
+  status = 404
 
 [[headers]]
   for = "/*"
@@ -21,6 +28,17 @@
 
 [[headers]]
   for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/robots.txt"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 

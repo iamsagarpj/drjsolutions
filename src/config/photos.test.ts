@@ -19,7 +19,7 @@ describe('photoSrcSet', () => {
     const srcSet = photoSrcSet('hero');
     expect(srcSet).toContain('640w');
     expect(srcSet).toContain('1920w');
-    expect(srcSet).toContain('2560w');
+    expect(srcSet).not.toContain('2560w');
   });
 });
 

@@ -28,12 +28,19 @@ export function TermsPage() {
   return (
     <>
       <Seo copy={t.seo.terms} path={ROUTES.terms} />
-      <PageHero title={t.legal.termsTitle} />
+      <PageHero title={t.legal.termsTitle} body={t.legal.termsIntro} />
       <section className="section-y">
         <Container narrow>
-          <div className="space-y-5 text-muted leading-relaxed">
-            {t.legal.termsBody.map((p) => (
-              <p key={p}>{p}</p>
+          <div className="space-y-8">
+            {t.legal.termsSections.map((section) => (
+              <article key={section.title}>
+                <h2 className="text-lg text-navy sm:text-xl">{section.title}</h2>
+                <div className="mt-3 space-y-3 text-sm leading-relaxed text-muted sm:text-base">
+                  {section.body.map((p) => (
+                    <p key={p}>{p.replaceAll('{email}', BUSINESS.email)}</p>
+                  ))}
+                </div>
+              </article>
             ))}
           </div>
         </Container>
