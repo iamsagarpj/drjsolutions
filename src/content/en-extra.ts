@@ -398,7 +398,7 @@ const guideSatara: GuidePageCopy = {
   eyebrow: 'Satara guide',
   title: 'Rooftop solar in Satara: a practical local guide',
   intro:
-    'This guide is for homeowners and small businesses in Satara who want to understand the roof, the weather, the electricity connection and the installer process — without treating social-media forwards as engineering. DRJ Solutions works from Anand Nagar, Satara, and takes projects at other locations after a survey is planned.',
+    'This guide is for homeowners and small businesses in Satara who want to understand the roof, the weather, the electricity connection and the installer process — without treating social-media forwards as engineering. DRJ Solutions works from Yadogopal Peth, Satara, and takes projects at other locations after a survey is planned.',
   sections: [
     {
       title: 'What a Satara roof usually looks like',

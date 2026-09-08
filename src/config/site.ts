@@ -14,9 +14,9 @@ export const BUSINESS = {
   phoneDisplay: PHONE_DISPLAY,
   email: 'drjsolutions5@gmail.com',
   address: {
-    line1: '7 Hills Apartment',
-    line2: '18, Shri Chhatrapati Shahu Maharaj Rd',
-    line3: 'Anand Nagar, Zunjar Colony',
+    line1: 'Flat No. ST 03, 7 Hills Apartment',
+    line2: 'Samartha Mandir Road, near Adalatwada',
+    line3: 'Yadogopal Peth, S.No. 121/C/1/C',
     city: 'Satara',
     state: 'Maharashtra',
     postalCode: '415002',
@@ -27,7 +27,7 @@ export const BUSINESS = {
 
 /** Exact query Google Maps should open for the office. */
 export const MAPS_QUERY =
-  '7 hills apartment, 18, Shri Chhatrapati Shahu Maharaj Rd, Anand Nagar, Zunjar Colony, Satara, Maharashtra 415002';
+  'Flat No ST 03, 7 Hills Apartment, Samartha Mandir Road, near Adalatwada, Yadogopal Peth, Satara, Maharashtra 415002';
 
 export function formattedAddress(): string {
   const { line1, line2, line3, city, state, postalCode, country } = BUSINESS.address;

@@ -11,7 +11,7 @@ export function TopBar() {
       <div className="wrap-wide flex h-9 items-center justify-between gap-3 text-[0.75rem] font-medium">
         <p className="flex min-w-0 items-center gap-1.5 truncate text-white/75">
           <MapPin className="size-3.5 shrink-0 text-sun-bright" aria-hidden />
-          {BUSINESS.address.line3}, {BUSINESS.address.city}
+          {BUSINESS.address.line3.split(',')[0]}, {BUSINESS.address.city}
         </p>
         <div className="flex shrink-0 items-center gap-4">
           <a

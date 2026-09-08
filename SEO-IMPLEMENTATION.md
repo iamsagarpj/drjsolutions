@@ -221,7 +221,7 @@ Must match the site:
 
 - Name: **DRJ Solutions**
 - Phone: **9579792080** / **+91 95797 92080**
-- Address: **7 Hills Apartment, 18, Shri Chhatrapati Shahu Maharaj Rd, Anand Nagar, Zunjar Colony, Satara, Maharashtra 415002**
+- Address: **Flat No. ST 03, 7 Hills Apartment, Samartha Mandir Road, near Adalatwada, Yadogopal Peth, S.No. 121/C/1/C, Satara, Maharashtra 415002**
 - Website: **https://drjsolutions.in/**
 - Service area: Satara-first; add other towns only if you genuinely serve them
 

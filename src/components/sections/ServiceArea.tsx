@@ -18,7 +18,7 @@ export function ServiceArea() {
             {t.details.serviceAreaBody}
           </p>
           <p className="mt-3 text-sm font-medium text-navy">
-            {BUSINESS.address.line1}, {BUSINESS.address.line3}, {BUSINESS.address.city}
+            {BUSINESS.address.line1}, {BUSINESS.address.line2}, {BUSINESS.address.city}
           </p>
         </div>
       </Reveal>

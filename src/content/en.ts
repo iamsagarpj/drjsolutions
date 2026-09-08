@@ -78,7 +78,7 @@ export const en: SiteContent = {
   details: {
     serviceAreaTitle: 'Where we work',
     serviceAreaBody:
-      'DRJ Solutions is based at 7 Hills Apartment, Anand Nagar, Satara, Maharashtra. Satara city and Satara district are our home ground. We also take rooftop solar projects for homes, shops and businesses at other locations — there is no hard service-area boundary. Households in nearby towns such as Karad, Phaltan, Wai, Mahabaleshwar, Patan, Koregaon, Man, Khatav and Jaoli can enquire the same way; we schedule a survey around the site rather than publishing a separate page for every town. Book a free site survey, or call / WhatsApp to discuss your roof.',
+      'DRJ Solutions is based at Flat No. ST 03, 7 Hills Apartment, Samartha Mandir Road, Yadogopal Peth, Satara, Maharashtra. Satara city and Satara district are our home ground. We also take rooftop solar projects for homes, shops and businesses at other locations — there is no hard service-area boundary. Households in nearby towns such as Karad, Phaltan, Wai, Mahabaleshwar, Patan, Koregaon, Man, Khatav and Jaoli can enquire the same way; we schedule a survey around the site rather than publishing a separate page for every town. Book a free site survey, or call / WhatsApp to discuss your roof.',
     surveyPrepTitle: 'Keep these ready for a useful site survey',
     surveyPrep: [
       'A recent electricity bill (last one to three months if you have them)',
@@ -194,7 +194,7 @@ export const en: SiteContent = {
     heroEyebrow: 'Solar installation company · Satara, Maharashtra',
     heroTitle: 'Rooftop solar for homes and businesses in Satara',
     heroBody:
-      'DRJ Solutions plans and installs rooftop solar from our office in Anand Nagar, Satara. We work on residential, commercial and industrial roofs — on-grid, hybrid or off-grid where the site needs it — and help you understand subsidy paperwork without treating unofficial numbers as promises. Book a free site survey to see what your roof can do.',
+      'DRJ Solutions plans and installs rooftop solar from our office in Yadogopal Peth, Satara. We work on residential, commercial and industrial roofs — on-grid, hybrid or off-grid where the site needs it — and help you understand subsidy paperwork without treating unofficial numbers as promises. Book a free site survey to see what your roof can do.',
     trust: [
       { title: 'Rooftop Solar Solutions', text: 'For homes and businesses' },
       { title: 'Free Site Survey', text: 'Understand what your roof can do' },
@@ -284,7 +284,7 @@ export const en: SiteContent = {
       },
       {
         title: 'Work at any location',
-        text: 'Our office is at 7 Hills Apartment, Anand Nagar, Satara. We take projects anywhere — there is no service-area limit — and stay available for surveys, advice and support.',
+        text: 'Our office is at Flat No. ST 03, 7 Hills Apartment, Yadogopal Peth, Satara. We take projects anywhere — there is no service-area limit — and stay available for surveys, advice and support.',
       },
     ],
     solutionsTitle: 'Solar for homes, shops and industry',
@@ -358,7 +358,7 @@ export const en: SiteContent = {
       'We start with listening: your bill, your roof, your questions. We do not push a standard package. A free site survey comes before any serious proposal, because shade, structure and consumption decide what is actually suitable.',
     localTitle: 'Office and reach',
     local:
-      'Our office is at 7 Hills Apartment, 18, Shri Chhatrapati Shahu Maharaj Rd, Anand Nagar, Zunjar Colony, Satara, Maharashtra 415002. We take rooftop solar projects at any location — there is no service-area boundary. If you want to talk before filling a form, call or WhatsApp us.',
+      'Our office is at Flat No. ST 03, 7 Hills Apartment, Samartha Mandir Road, near Adalatwada, Yadogopal Peth, S.No. 121/C/1/C, Satara, Maharashtra 415002. We take rooftop solar projects at any location — there is no service-area boundary. If you want to talk before filling a form, call or WhatsApp us.',
     ownerPlaceholderTitle: 'Leadership & team',
     ownerPlaceholder:
       'Founder details, team profiles and photographs can be added here when the business owner shares them. We have not invented names, years or awards.',
@@ -701,7 +701,7 @@ export const en: SiteContent = {
     eyebrow: 'Contact',
     title: 'Talk to DRJ Solutions',
     intro:
-      'Call, WhatsApp, or request a free site survey from any location. Our office is at 7 Hills Apartment, Anand Nagar, Satara.',
+      'Call, WhatsApp, or request a free site survey from any location. Our office is at Flat No. ST 03, 7 Hills Apartment, Yadogopal Peth, Satara.',
     callTitle: 'Call us',
     callBody: 'Speak with us about your bill, roof or a site visit.',
     waTitle: 'WhatsApp',
@@ -729,7 +729,7 @@ export const en: SiteContent = {
         title: 'Who we are',
         body: [
           'DRJ Solutions provides rooftop solar solutions for homes and businesses. You can reach us on 9579792080, WhatsApp, or {email}.',
-          'Our office is at 7 Hills Apartment, 18, Shri Chhatrapati Shahu Maharaj Rd, Anand Nagar, Zunjar Colony, Satara, Maharashtra 415002. We take rooftop solar projects at any location.',
+          'Our office is at Flat No. ST 03, 7 Hills Apartment, Samartha Mandir Road, near Adalatwada, Yadogopal Peth, S.No. 121/C/1/C, Satara, Maharashtra 415002. We take rooftop solar projects at any location.',
         ],
       },
       {
